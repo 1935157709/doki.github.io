@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Mysql数据库 | 欢迎浏览</title>
+        <meta name="author" content="Eva">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">欢迎浏览</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;欢迎浏览</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>Mysql数据库 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Mysql" style="color: #00a596">
+                    Mysql
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <p>数据库是按照数据的结构，存储和管理数据的仓库</p>
+<p>数据库分为 <code>关系型数据库</code> 和 <code>非关系型</code> 数据库</p>
+<p>关系性数据库：sql数据库容易理解 使用方便 易于维护，缺点海量数据读写低，难以扩展</p>
+<p>非关系性数据库：nosql ，not only sql就是为了加快客户端访问速度时出现的</p>
+<hr>
+<p><strong>mysql存储原理</strong></p>
+<p>整体架构：</p>
+<p> 1.连接池：最上层负责和客户端进行连接</p>
+<p>2.sql接口：当sql语句进入mysql，会先到sql接口中，这一层是封装层</p>
+<p>3.解析器：这一层负责将sql语句进行拆分验证</p>
+<p>4.优化器：对sql查询的结果优化处理，产生多种执行计划。最终数据库会选择最优话的方案</p>
+<p>5.缓存：对要查询的sql语句进行hash后缓存</p>
+<p>6.存储引擎：mysql有很多种存储引擎，每一种存储引擎有不同的特性，他们负责组织文件存放位置，访问方法</p>
+<hr>
+<p><strong>下载安装mysql</strong></p>
+<p>网页搜索mysql官网</p>
+<p>点击DOWNLOADS，选择mysql community社区版根据需求下载</p>
+<p>mysql官网有三种安装方式：</p>
+<p>1.压缩包安装</p>
+<p>2.压缩包自带boost安装</p>
+<p>3.rpm包安装</p>
+<p>安装好以后尝试进入数据库，如果可以进入说明安装成功</p>
+<hr>
+<p><strong>SQL</strong></p>
+<p>Structured Query Language 结构化查询语言</p>
+<hr>
+<p><strong>面试常问</strong></p>
+<p>1.公司数据库是什么架构？</p>
+<p>我们公司是主从，那你们公司主挂了怎么办，从是不会替代主的</p>
+<p>前端去连服务器的时候连的是虚拟IP，前端的代码是会写到从里面的，这在一开始就写好了</p>
+<hr>
+<p>2.如何解决主从复制延迟？</p>
+<hr>
+<p>3.mysql主从模式有几种？</p>
+<p>第一种异步，速度快，但是对于数据安全比较低</p>
+<p>第二种半同步，相对比异步安全一点</p>
+<p>第三种全同步</p>
+<hr>
+<p>4.锁</p>
+<p>一般问的比较少，大致分为读锁，写锁，行锁，页锁。</p>
+<hr>
+<p>5.事物与隔离级别</p>
+<p>隔离级别</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">隔离级别                              脏读     不可重复读     幻读</span><br><span class="line">读未提交                              √          √           √</span><br><span class="line">读已提交                              x          √           √</span><br><span class="line">可重复读                               x          x           √</span><br><span class="line">可串行化                              x          x            x</span><br></pre></td></tr></table></figure>
+
+<p>ACID四大特性</p>
+<p> 原子性，一致性，隔离性，持久性</p>
+<hr>
+<p>6.索引</p>
+<p>索引的好处：1、帮助用户提高查询速度. 2、利用索引的唯一性来控制记录的唯一性. 3、可以加速表与表之间的连接. 4、降低查询中分组和排序的时间</p>
+<p>索引的坏处：1、存储索引占用磁盘空间 2、执行修改操作（insert、delete、update）产生索引维护</p>
+<p>索引是用什么数据结构的？</p>
+<p>B+树</p>
+<p>b+树，是b树的一种变体，查询性能更好</p>
+<p>mysql有哪些存储引擎，默认innoDB与 MylSAM区别</p>
+<p> InnoDB、MyISAM、Memory、Merge、Archive、CSV、BLACKHOLE 等</p>
+<ol>
+<li>InnoDB支持事务，MyISAM不支持，对于InnoDB每一条SQL语言都默认封装成事务，自动提交，这样会影响速度，所以最好把多条SQL语言放在begin和commit之间，组成一个事务； </li>
+<li>InnoDB支持外键，而MyISAM不支持。对一个包含外键的InnoDB表转为MYISAM会失败；</li>
+</ol>
+<p>索引有哪些类型，一定要把组合索引说出来，然后会问组合索引规则即最左原则</p>
+<p>​     普通索引index :加速查找</p>
+<p>唯一索引</p>
+<p> 主键索引：primary key ：加速查找+约束（不为空且唯一）</p>
+<p>  唯一索引：unique：加速查找+约束 （唯一）</p>
+<p>联合索引</p>
+<p>  -primary key(id,name):联合主键索引</p>
+<p>-unique(id,name):联合唯一索引</p>
+<p>  -index(id,name):联合普通索引</p>
+<p>全文索引fulltext :用于搜索很长一篇文章的时候，效果最好。</p>
+<p>空间索引spatial :了解就好，几乎不用</p>
+<hr>
+<p>7.SQL优化或者说什么时候索引失效</p>
+<p>避免使用*通配符“%”或者“_”作为查询字符串的第一个字符<br>在设计表时，把索引列设置为NOT NULL<br>Where子句中避免在索引列上使用计算<br>索引列上进行函数操作，索引失效<br>用&gt;&#x3D; 代替 &gt; 尽量不使用 &lt;&gt; 或者!&#x3D;<br>使用EXISTS代替 in 用not EXISTS 代替 not in</p>
+<p>1、like的模糊查询以%开头<br>2、条件中用or，即使其中有条件带索引，也不会使用索引查询<br>3、查询条件如果是<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%AD%97%E7%AC%A6%E4%B8%B2&spm=1001.2101.3001.7020">字符串</a>，不加引号会使索引失效<br>4、not null 不会使用索引， is null 会使用索引<br>5、使用 &lt;&gt; 或者!&#x3D;<br>6、in not in<br>7、在索引列上使用计算</p>
+
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 欢迎浏览
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Eva
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>

@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>SQL语句 | 欢迎浏览</title>
+        <meta name="author" content="Eva">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">欢迎浏览</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;欢迎浏览</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>SQL语句 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Mysql" style="color: #03a9f4">
+                    Mysql
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <p>sql语句 每段都以;结尾，可添加换行，关键词间有空格，不区分大小写</p>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">查看所有数据库   show databases;</span><br><span class="line">连接数据库    mysql -u用户 -p</span><br><span class="line">创建数据库      create database 名字;</span><br><span class="line">创建数据库指定字符集    create database 名字 chaeacter set utf8;</span><br><span class="line">查看数据库详细   show create database 名字;</span><br><span class="line">删除数据库       drop database 名字;</span><br><span class="line">删除表           drop table 名字l;</span><br><span class="line">选中数据库     use 名字;</span><br><span class="line">查看所有表      show tables;</span><br><span class="line">创建表      creata table 名字 (字段1名 字段类型,字段2名 字段类型);</span><br><span class="line">查看表结构        show create table 名字  或   desc 名字</span><br><span class="line">创建表时指定表的字符集和引擎  create table 名字 (字段1 字段类型,字段2	字段类型)engine=myisam charset = utf8;</span><br><span class="line">修改表名称    rename table 原名 to 名字</span><br><span class="line">修改表的属性  alter table 名字 engine=myisam charset=gdk</span><br><span class="line">添加表的字段在最后     alter table 名字 add age int;</span><br><span class="line">添加表的字段在最前     alter table 名字 add fatherage int first;</span><br><span class="line">在表的某一个字段后添加   alter table 名字 add fathername varchar(10)after fatherage;</span><br><span class="line">删除表字段    alter table 名字 drop 字段名;</span><br><span class="line">修改字段名和类型    alter table 名字 change 原字段名 新字段名 新字段类型;</span><br><span class="line">修改类型和顺序      alter table 名字 modify 字段名 新字段类型 after 字段名 first alter table 名字 modify 字段名称 新字段类型;</span><br><span class="line">全表插入  insert into 名字 values(字段名 字段类型)</span><br><span class="line">指定字段插入   insert into 名字 (名,名,名)balues(类型,类型);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>查询语句</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查询所有字段 select * from 名;			</span><br><span class="line">查询指定字段 select(字段1,字段2)valuse(类型,类型)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>修改更新语句</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">修改全表  update 名 set</span><br><span class="line">修改指定条件  update 名 set math=50 where id=10</span><br><span class="line">删除指定条件   delete from 名 where id=10;</span><br><span class="line">删除表中的所有数据    delete from 名;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>主键</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">设置主键     create table student(id int primary ke age int);</span><br><span class="line">设置主键和自增   create table syudent (id int primarty key autoincrement,age int);</span><br><span class="line">删除主键   alter table users drop primary key;</span><br><span class="line">非空约束    not null          create table student(id int primary key auto_increment,age int not null);</span><br><span class="line">表字段注释  comment       create table user (id int comment &#x27;用户id&#x27;,age int comment &#x27;用户年龄&#x27;);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>mysql备份</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">删除二进制日志文件        mysql -u root -p 123123 -e &#x27;reset master&#x27;</span><br><span class="line">数据库备份           mysql -u root -p --databases 名字 &gt; /opt/dgf.sql</span><br><span class="line">备份所有数据库        mysql -u root -p --all-databases &gt; /opt/all-data.sql</span><br><span class="line">备份表             mysqldump -u root -p 数据库 表 &gt; /opt/表.sql</span><br><span class="line">还原数据表       mysql -u root -p 数据库 &lt; /opt/数据库</span><br><span class="line">将数据库下所有表结构导出       mysqldump -u root -p -d 数据库 &gt; /opt/数据库.sql</span><br><span class="line">导出单个表结构        mysqldump -u root -p -d 数据库 表 &gt; /opt/数据表.sql</span><br><span class="line">导出表数据不导出结构      mysqldump -u root -</span><br></pre></td></tr></table></figure>
+
+
+
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 欢迎浏览
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Eva
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>

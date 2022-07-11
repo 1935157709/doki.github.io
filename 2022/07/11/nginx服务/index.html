@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Nginx服务 | 欢迎浏览</title>
+        <meta name="author" content="Eva">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">欢迎浏览</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;欢迎浏览</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>Nginx服务 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/nginx" style="color: #00a596">
+                    nginx
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <p><strong>web 服务 nginx</strong></p>
+<p>nginx是用来解析网页的一个服务，也可以作为反向代理服务器</p>
+<p>nginx支持负载均衡，配置起来比httpd简单，既支持4层，又支持7层</p>
+<p>4层：传输层</p>
+<p>7层：应用层</p>
+<hr>
+<p><strong>nginx安装</strong></p>
+<p>1.先安装wget</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y wget</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.安装nginx依赖组件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc pcre pcre-devel zlib zlib-devel openssl openssl-deve</span><br></pre></td></tr></table></figure>
+
+<p>​     组件说明：</p>
+<p>​    gcc：</p>
+<p>可以编译C，C++ada，object C和java等语言</p>
+<p>​    Pcre pure-devel:</p>
+<p> Pcre 是一个perl库，包括perl兼容的正则表达式库，nginx的http模块使用pcre来解析正则表达式，所以需要安装pcre库</p>
+<p>  zlib zlib-devel：</p>
+<p>zlib 库提供了很多种压缩方式和解压缩方式nginx使用zlib对httpd包内容进行gzip所以安装</p>
+<p>  openssl openssl-devel：</p>
+<p>openssl 让nginx支持https协议，是web安全通信的基石，没有openssl，可以说我们的信息都是在裸奔</p>
+<p>3.然后去浏览器搜索nginx，进入官网点击download</p>
+<p>mainline version            stable version        legacy version</p>
+<p>开发版测试版                      稳定版                       以前的版本</p>
+<p>将nginx压缩包解压，进入nginx目录输入</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-http_realip_module</span><br></pre></td></tr></table></figure>
+
+<p>–prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx:</p>
+<p>指定nginx的安装目录</p>
+<p>–with-http_ssl_module：</p>
+<p>让nginx支持https协议，支持ssl证书</p>
+<p>–with-http_realip_module：</p>
+<p>启用realip模块，让客户端获取ip地址</p>
+<p>4.安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>5.ngix启动脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/nginx.service</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=nginx - high performance web server</span><br><span class="line">Documentation=http://nginx.org/en/docs</span><br><span class="line">After=network.target remote-fs.target nss-lookup.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">PIDFile=/usr/local/nginx/nginx.pid</span><br><span class="line">ExecStartPre=/usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf</span><br><span class="line">ExecStart=/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</span><br><span class="line">ExecReload=/bin/kill -s HUP $MAINPID</span><br><span class="line">ExecStop=/bin/kill -s QUIT $MAINPID</span><br><span class="line">PrivateTmp=true</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>6.制作软链接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/nginx/sbin/nginx /usr/local/sbin</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p><strong>nginx配置文件</strong></p>
+<p>如果你的nginx使用yum安装的那么nginx主配置文件在&#x2F;etc&#x2F;nginx&#x2F;nginx.conf 整个文件的类型是以区块组织的，一般每个区块以一对大括号划分{}</p>
+<p>conf：配置文件</p>
+<p>html：网站存放路径</p>
+<p>logs：存放nginx日志            </p>
+<p>sbin：nginx命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi nginx.conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &#x27;/^$/d&#x27; ngindx.conf   去除注释</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>worker_processes 1;</p>
+<p>用来指定工作进程，根据cpu核心设置                全局部分</p>
+<hr>
+<p>events {</p>
+<p>   Worker_connections 1024;           events部分,用来指定每个进程最大的连接             </p>
+<p>}</p>
+<hr>
+<p>http {                                                  http大模块，可以有多个server模块,一个             </p>
+<p>​                                               server模块代表一个虚拟主机,server模块又包含        </p>
+<p>​                                                 location（主机）</p>
+<p>​    </p>
+<hr>
+<p>include    mime.types ;               指定nginx能够处理哪些类型的数据，这个文 </p>
+<p>​                                                       件在默认的安装路径</p>
+<p>​                                                          &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;mime&#x2F;types</p>
+<hr>
+<p>Sendfile     on;                            用来开启0拷贝，加快文件调取的速度</p>
+<hr>
+<p>keepalive_timeout        65;                链接超时时间</p>
+<hr>
+<hr>
+<p><strong>nginx日志配置</strong></p>
+<p>​                      Request</p>
+<p>客户端       》〉》〉     服务端</p>
+<p>​                〈《《《</p>
+<p>​                     Response</p>
+<p>Request  请求报文  请求行，请求头部，请求数据</p>
+<p>response   响应报文    状态吗，消息报头，响应文</p>
+<p>日志格式</p>
+<p>主配置文件里，默认是有注释的，但可以把注释去除</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">log_format  main    格式化日志</span><br><span class="line">&#x27;$remote_addr   客户端ip地址</span><br><span class="line">$remote_user    客户端用户名</span><br><span class="line">[$time_local]    本地时间</span><br><span class="line">$request     请求的协议，包含请求的方法 时间 资源</span><br><span class="line">$status     状态码</span><br><span class="line">$body_bytes_sent 传输的数据大小</span><br><span class="line">$http_referer   http上一级页面，防盗链，用户行为分析</span><br><span class="line">$http_user_agent    客户端访问设备</span><br><span class="line">$http_x_forwarded_for  请求携带的ip地址</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>log_format  main  ‘$remote_addr - $remote_user [$time_local] “$request” ‘<br>                                ‘$status $body_bytes_sent “$http_referer” ‘<br>                              ‘“$http_user_agent” “$http_x_forwarded_for”‘;</p>
+<hr>
+<p><strong>nginx状态监控</strong></p>
+<p>在安装编译nginx时输入，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--with-http_syub_syatus_module </span><br></pre></td></tr></table></figure>
+
+<p>记录nginx客户端基本访问状态信息</p>
+<p>具体配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location /mystatus &#123;</span><br><span class="line">stub_syatus on;</span><br><span class="line">access_log off;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>nginx状态监控相对来说没什么太大作用</p>
+<hr>
+<p><strong>nginx下载站点</strong></p>
+<p>可供用户下载资源的网站</p>
+<p>配置方法：</p>
+<p>在主配置文件加入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">autoindex on | off;   自动索引</span><br><span class="line">http    server    location三个区域都可用</span><br></pre></td></tr></table></figure>
+
+<p>让网页显示的文件用KB MB GB 显示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">autoindex-exact_size off;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>nginx访问限制</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">limit_conn_module</span><br><span class="line">模块可以限制nginx服务器所承受的单个客户端单个IP地址在单一时间所发起的连接数量</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">limit_rep_module</span><br><span class="line">模块可以限制nginx服务器承受的单个客户端单个IP地址在同一时间所发起的请求数量</span><br><span class="line"></span><br><span class="line">      加入到http区域</span><br></pre></td></tr></table></figure>
+
+<p>Limit : 限制的意思</p>
+<p>conn:链接的意思</p>
+<p>module: 模块</p>
+<p>查看nginx都装了哪些模块:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat auto/options | grep YES</span><br></pre></td></tr></table></figure>
+
+<p>安装命令ab，可以模拟请求</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install httpd-tools</span><br></pre></td></tr></table></figure>
+
+<p>-n 请求</p>
+<p>-c 并发量</p>
+<p>格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令   选项  参数  地址</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>nginx虚拟主机</strong></p>
+<p>通过修改主配置文件实现多域名访问不同页面</p>
+<p>修改配置文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server模块下修改</span><br><span class="line"></span><br><span class="line">server——name  域名</span><br><span class="line">root  页面路径</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p><strong>nginx访问控制</strong></p>
+<p>两种访问控制，一种基于IP，一种基于用户登陆</p>
+<p>有一定局限性，如果客户端通过代理服务器访问，则限制失效</p>
+<p>http_access_module        IP</p>
+<p>http_auth_basic_module          用户登陆</p>
+<p>拒绝某一IP登陆：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server下修改</span><br><span class="line"></span><br><span class="line">deny   地址;</span><br><span class="line">allow  all;</span><br></pre></td></tr></table></figure>
+
+<p>x_forwarded_for  记录真实IP地址</p>
+<p>客户端通过代理访问web服务器，代理记住了客户端真实IP，web服务器记住了客户端真实地址和代理真实地址，只要开启了x_forwarded_for 不管客户端经过几层代理，最后都会被web服务器记录到</p>
+<p>安装认证模块：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install httpd-tools</span><br></pre></td></tr></table></figure>
+
+
+
+<p>创建一个用户名密码文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">htpasswd -c /usr/local/nginx/conf/文件   用户名</span><br></pre></td></tr></table></figure>
+
+<p>将用户名密码文件加入nginx配置文件里：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">auth_basic &quot;登陆提示语&quot;;</span><br><span class="line">auth_basic_user_file;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>nginx location&#x2F;区别</strong></p>
+<p>proxy_pass模块，默认是安装的</p>
+<p>首先配置反向代理：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">server下配置</span><br><span class="line"></span><br><span class="line">proxy_pass http://代理地址/;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>nginx静态资源</strong></p>
+<p>静态资源：  .html    .css   .js等</p>
+<p>动态资源：  php等</p>
+<p>优化网页修改配置文件,http模块</p>
+<ol>
+<li><p>sendfile on;   称为0拷贝，提升文件读取速度</p>
+</li>
+<li><p>提高网络传输速率 tcp_nopush on;</p>
+</li>
+<li><p>提高网络传输的实时性  tcp_nodelay on;</p>
+<hr>
+</li>
+</ol>
+<p><strong>静态文件压缩</strong></p>
+<p>客户端浏览器向服务端访问数据，服务端接收到数据向客户端发送数据，进行数据压缩，能够有效的节省网络带宽</p>
+<p>gzip 压缩语法，可在http模块下更改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gzip   on;</span><br></pre></td></tr></table></figure>
+
+<p>gzip压缩比率</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gzip_comp_level 1;</span><br><span class="line">数字越高压缩比率越大，并不是比率越大越好</span><br></pre></td></tr></table></figure>
+
+<p> gzip版本号</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gzip_http_version 1.1;</span><br></pre></td></tr></table></figure>
+
+<p> gzip 压缩类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gzip_types 类型</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<hr>
+<p><strong>面试考点</strong>：</p>
+<p>为什么nginx用的比httpd多？</p>
+<p>1.nginx抗并发比httpd好        httpd刚出的时候抗并发是2万</p>
+<p>​                                                  nginx是5万</p>
+<p>2.nginx在处理请求时是异步非阻塞，使用epoll作为开发模型</p>
+<p>httpd是同步阻塞的，使用select作为开发模型</p>
+<p>不管是nginx 还是httpd 都是多进程的</p>
+<p>nginx有一个主进程和一个子进程，主进程不工作，把工作交给子进程进行</p>
+<p>多个链接对应一个进程</p>
+<p>httpd有多个进程，一个链接对应一个进程</p>
+<p>3.nginx配置文件在哪？</p>
+<p>源码安装一般在你安装目录下</p>
+<p>如果用yum安装，那么是在etc下有个nginx.conf</p>
+<p>4.nginx常用模块</p>
+<p>两种访问控制，一种基于IP，一种基于用户登陆</p>
+<p>http_access_module        IP</p>
+<p>http_auth_basic_module          用户登陆</p>
+<ol start="5">
+<li><p>你在上家公司对nginx做过哪些优化，可选择性回答</p>
+<p>没有做过优化，数据很正常不卡顿</p>
+<p>磁盘很正常</p>
+<p>首选要确定什么原因造成的卡顿，一般做过</p>
+<p>提高文件读取速度：   sendfile</p>
+</li>
+</ol>
+<p>​       提高网络传输效率：     nopush</p>
+<p>​       提高网络传输的实时性：   nodelay</p>
+
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 欢迎浏览
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Eva
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>

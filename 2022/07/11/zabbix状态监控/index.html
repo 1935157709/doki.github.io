@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Zabbix状态监控 | 欢迎浏览</title>
+        <meta name="author" content="Eva">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">欢迎浏览</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;欢迎浏览</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>Zabbix状态监控 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/zabbix" style="color: #ffa2c4">
+                    zabbix
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <p><strong>zabbix状态监控</strong></p>
+<p>1.系统层面监控</p>
+<p>监控运行内存，cpu占用，网络 磁盘 tcp的连接状态</p>
+<p>2.应用监控 </p>
+<p> 监控程序是否正常运行，通过进程和端口来监控</p>
+<p>还可以监控应用的性能</p>
+<hr>
+<p>运维常用的监控软件：</p>
+<p>nagios      cacti      ganglia     promethues     zabbix      open—falcon</p>
+<p>zabbix监控软件：是一个C&#x2F;S架构，也是一个B&#x2F;S架构 zabbix的前段页面是由PHP写的</p>
+<p>C&#x2F;S架构：客户端和服务端</p>
+<p>B&#x2F;S架构：可以通过浏览器访问</p>
+<hr>
+<p><strong>zabbix安装</strong></p>
+<p>安装要求</p>
+<p>web服务*1</p>
+<p>PHP*1</p>
+<p>Mysql*1</p>
+<p><strong>Centos7安装Zabbix 5.0安装</strong></p>
+<p>一、系统环境准备</p>
+<p>1、关闭防火墙（可以选择开放对应的端口，默认为tcp&#x2F;udp 10050、10051）</p>
+<p>systemctl stop firewalld &amp;&amp; systemctl disable firewalld</p>
+<p>2、关闭SELinux：</p>
+<p>setenforce 0</p>
+<p>sed -i ‘s&#x2F;SELINUX&#x3D;enforcing&#x2F;SELINUX&#x3D;disabled&#x2F;‘ &#x2F;etc&#x2F;selinux&#x2F;config</p>
+<p>3、重启reboot</p>
+<p>二、安装并配置zabbix</p>
+<p>1、安装 zabbix rpm 源,使用阿里云 zabbix 源</p>
+<p>rpm -Uvh <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/zabbix/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm">https://mirrors.aliyun.com/zabbix/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm</a></p>
+<p>yum clean all &amp;&amp; yum makecache fast</p>
+<p>2、安装zabbix服务端组件 zabbix server 和 agent</p>
+<p>yum install zabbix-server-mysql zabbix-agent -y</p>
+<p>3、安装zabbix前端组件</p>
+<p>yum install centos-release-scl -y</p>
+<p>4、编辑配置文件 vi &#x2F;etc&#x2F;yum.repos.d&#x2F;zabbix.repo,将[zabbix-frontend]下的 enabled 改为 1（1-启用；0-不启用）</p>
+<p>5、安装zabbix前端页面、初始数据库、PHP及httpd组件</p>
+<p>yum install zabbix-web-mysql-scl zabbix-apache-conf-scl -y</p>
+<p>三、安装并配置MySQL数据库</p>
+<p>1、安装 centos7 默认的 mariadb 数据库</p>
+<p>yum install mariadb-server -y</p>
+<p>2、启动数据库，并配置开机自动启动</p>
+<p>systemctl enable –now mariadb</p>
+<p>3、使用以下命令初始化 mariadb 并配置 root 密码</p>
+<p>mysql_secure_installation</p>
+<p>4、使用 root 用户进入 mysql，并建立 zabbix 数据库，注意数据库编码</p>
+<p>create database zabbix character set utf8 collate utf8_bin;</p>
+<p>create user zabbix@localhost identified by ‘PW@2021’;</p>
+<p>grant all privileges on zabbix.* to zabbix@localhost;</p>
+<p>quit;</p>
+<p>5、使用以下命令导入 zabbix 数据库，zabbix 数据库用户为 zabbix，密码为 PW@2021</p>
+<p>zcat &#x2F;usr&#x2F;share&#x2F;doc&#x2F;zabbix-server-mysql*&#x2F;create.sql.gz | mysql -uzabbix -p zabbix</p>
+<p>四、zabbix配置初始化</p>
+<p>1、配置数据库连接信息</p>
+<p>修改 zabbix server 配置文件vi &#x2F;etc&#x2F;zabbix&#x2F;zabbix_server.conf 里的数据库密码</p>
+<p>DBPassword&#x3D;PW@2021</p>
+<p>2、配置时区信息</p>
+<p>vi &#x2F;etc&#x2F;opt&#x2F;rh&#x2F;rh-php72&#x2F;php-fpm.d&#x2F;zabbix.conf ,修改时区</p>
+<p>php_value[date.timezone] &#x3D; Asia&#x2F;Shanghai</p>
+<p>3、配置字体，避免前台监控图形中文乱码</p>
+<p>yum -y install wqy-microhei-fonts</p>
+<p>cp &#x2F;usr&#x2F;share&#x2F;fonts&#x2F;wqy-microhei&#x2F;wqy-microhei.ttc &#x2F;usr&#x2F;share&#x2F;fonts&#x2F;dejavu&#x2F;DejaVuSans.ttf  </p>
+<p>4、启动zabbix相关服务并设置开机自启动</p>
+<p>systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm</p>
+<p>systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm</p>
+<p>5、浏览器上访问前端，进行初始化安装</p>
+<p>使用浏览器访问<a target="_blank" rel="noopener" href="http://xxxx/zabbix">http://xxxx/zabbix</a></p>
+<p>输入刚配置的数据库 zabbix 用户的密码:PW@2021</p>
+<p>6、登录账号为 <strong>Admin</strong>，密码： <strong>zabbix</strong></p>
+<p>进入系统后，默认是英文显示，点击左下角User settings，设置语言为中文即可</p>
+<p>vi &#x2F;etc&#x2F;zabbix&#x2F;zabbix_agentd.conf </p>
+<p>service Zabbix-agent restart</p>
+<p>systemctl restart zabbix-agent.service</p>
+<p>排错：</p>
+<p>Can’t open PID file &#x2F;run&#x2F;zabbix&#x2F;zabbix_server.pid (yet?) after start: No such file or directory</p>
+<p>cat &#x2F;var&#x2F;log&#x2F;zabbix&#x2F;zabbix_server.log</p>
+<p> tail -f &#x2F;var&#x2F;log&#x2F;messages </p>
+<p>vi &#x2F;etc&#x2F;zabbix&#x2F;zabbix_server.conf</p>
+<p>PidFile&#x3D;&#x2F;tmp&#x2F;zabbix_server.pid</p>
+<p>PidFile&#x3D;&#x2F;var&#x2F;run&#x2F;zabbix&#x2F;zabbix_server.pid</p>
+<p>开启防火墙：</p>
+<p> firewall-cmd –zone&#x3D;public –add-port&#x3D;10050&#x2F;tcp –permanent</p>
+<p>firewall-cmd –zone&#x3D;public –add-port&#x3D;10050&#x2F;udp –permanent</p>
+<p>firewall-cmd –zone&#x3D;public –add-port&#x3D;10051&#x2F;tcp –permanent</p>
+<p>firewall-cmd –zone&#x3D;public –add-port&#x3D;10051&#x2F;udp –permanent</p>
+<p>firewall-cmd –zone&#x3D;public –add-port&#x3D;80&#x2F;tcp –permanent</p>
+<p> systemctl restart firewalld</p>
+<p>cat &#x2F;etc&#x2F;firewalld&#x2F;zones&#x2F;public.xml</p>
+<p><strong>zabbix主动被动模式</strong></p>
+<p>zabbix默认是使用被动模式</p>
+<p>主动：被监控端将数据主动发送给服务端，端口号10051持续监听</p>
+<p>被动：服务端定时向被监控端取数据端口号10050</p>
+<hr>
+
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 欢迎浏览
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Eva
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>

@@ -1,0 +1,1062 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>欢迎浏览</title>
+        <meta name="author" content="Eva">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">欢迎浏览</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;欢迎浏览</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        <div id="home-head">
+    <div id="home-background" style="background-image: url()"></div>
+    
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>欢迎浏览</h1>
+                <h3>Eva的blog</h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+    
+</div>
+
+<div id="home-posts-wrap" class=>
+    <div id="home-posts">
+        <div id="posts">
+            
+
+<div class="post">
+    <a href="/2022/07/11/MacM1安装win11/">
+        <h2>
+            MacM1安装win11
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <h1 id="MAC-M1-使用-VMware-Fusion-Tech-Preview-安装Windows11"><a href="#MAC-M1-使用-VMware-Fusion-Tech-Preview-安装Windows11" class="headerlink" title="MAC M1 使用 VMware Fusion Tech Preview 安装Windows11"></a>MAC M1 使用 VMware Fusion Tech Preview 安装Windows11</h1><h2 id="一、前提"><a href="#一、前提" class="headerlink" title="一、前提"></a>一、前提</h2><p>VMware Fusion Tech Preview</p>
+<p>Winsows11.vmdk</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">阿里网盘分享链接：</span><br><span class="line">「Windows11.mpg」https://www.aliyundrive.com/s/fHXRZ7NdenD</span><br><span class="line">点击链接保存，或者复制本段内容，打开「阿里云盘」APP ，无需下载极速在线查看，视频原画倍速播放。</span><br></pre></td></tr></table></figure>
+
+<p>下载后将windows11.mpg改为windows11.vmdk</p>
+<h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2><p>打开VMware Fusion Tech Preview -&gt; 新建虚拟机 -&gt; 创建自定虚拟机 -&gt; 选择Windows11.vmdk</p>
+<p>虚拟机配置 </p>
+<p>内存 4核+4096 以上 </p>
+<p>硬盘64G以上 </p>
+<p>开机</p>
+<h2 id="三、网络配置"><a href="#三、网络配置" class="headerlink" title="三、网络配置"></a>三、网络配置</h2><p>通过管理员启动cmd，输入以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bcdedit /debug on</span><br><span class="line"></span><br><span class="line">bcdedit /dbgsettings net hostip:10.0.0.1 port:55555</span><br></pre></td></tr></table></figure>
+
+<p>重新启动即可</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/安装win11" style="color: #ff7d73">
+                安装win11
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/MacM1安装win11/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/elk日志分析/">
+        <h2>
+            Elk日志分析
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>elk efk介绍</strong></p>
+<p>在公司经常用来分析日志</p>
+<p>elk ： ElasticSearch logstash kibana beats</p>
+<p>efk ： ElasticSearch Beats Kibana</p>
+<p>ElasticSearch 分布式搜索引擎，存储数据</p>
+<p>使用java语言开发</p>
+<p>Beats 专门用来采集日志的，在需要分析日志的服务器上安装 </p>
+<p>使用Go语言开发</p>
+<p>采集日志使用：filebeat</p>
+<p>采集性能指标使用： metricbeat</p>
+<p>采集网络指标路由交换： packetbeat</p>
+<p>采集windows ： winlogbeat</p>
+<p>采集负载：Heartbeat</p>
+<p>Logstash：接受Beats采集的数据，处理采集的数据转发给ElasticSearch</p>
+<p>Kibana ： 查日志，图形的数据显示界面</p>
+<p>原理展示：</p>
+<p>![截屏2022-07-04 15.20.14](&#x2F;Users&#x2F;doki&#x2F;Documents&#x2F;笔记&#x2F;截屏2022-07-04 15.20.14.png)</p>
+<p>filebeat采集日志要比处理快，有可能出现堵塞，所以可以加入redis队列</p>
+<h1 id="实验准备"><a href="#实验准备" class="headerlink" title="实验准备"></a>实验准备</h1><p>四台机器：</p>
+<p>els        搜索引擎</p>
+<p>logstash     日志处理，redis队列</p>
+<p>filebeat         日志收集       生成日志</p>
+<p>kibana      图形化界面展示</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/elk" style="color: #03a9f4">
+                elk
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/elk日志分析/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/Linux常用命令/">
+        <h2>
+            Linux常用命令
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>1.查看系统版本</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# cat /etc/redhat-release</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# lsb_release -a</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.查看内核版本</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# uname -r</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# cat /proc/version</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.查看cpu信息</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# cat /proc/cpuinfo</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# lscpu</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.查看内存信息</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# cat /proc/meminfo </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# free -m</span><br></pre></td></tr></table></figure>
+
+<p>total：表示物理内存总量。</p>
+<p>used:表示使用的内存</p>
+<p>free：未被分配的内存</p>
+<p>shared：共享内存</p>
+<p>buffers：缓存</p>
+<p>cached：缓存</p>
+<p>available:可用内存</p>
+<p><strong>5.setuid setgid  stickybit</strong></p>
+<p>Setuid:主要针对二进制文件的（Linux命令），让普通用户在执行命令时用的是属主的权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# chmod 4777 /sbin/poweroff </span><br></pre></td></tr></table></figure>
+
+<p>Setgid：主要针对二进制文件的（Linux命令），让普通用户在执行命令时用的是属组的权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# chmod 2777 /sbin/poweroff </span><br></pre></td></tr></table></figure>
+
+<p>Stickybit：粘滞位  只有这个目录过着这个文件的创建者，才可以删除，其他人即便有权限，也无法删除</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# chmod -R 1777 /tmp/</span><br></pre></td></tr></table></figure>
+
+<p>6.<strong>开机自动挂载文件</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/fstab</span><br></pre></td></tr></table></figure>
+
+<p>尽量不要更改备份分区栏目容易导致系统损坏</p>
+<p>​         1.全局环境变量配置文件, 更改文件内容对所有用户生效</p>
+<p>​          例如安装jdk运行环境，运行只能通过好多层路径运行，如果加入变量就可以直接运行方便很多</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>​          在最后一行加入：PATH&#x3D;$PATH:路径</p>
+<p>​         2.局部环境变量配置文件，当前用户更改只对当前用户生效</p>
+<p>​          在家目录下输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi .bash_profile</span><br></pre></td></tr></table></figure>
+
+
+
+<p>7.<strong>netstat -anptu</strong></p>
+<p>查看服务监听的端口｜查看网络连接数｜查看服务是否启动</p>
+<p>8.<strong>top命令 查看系统负载 cpu</strong></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Linux" style="color: #03a9f4">
+                Linux
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/Linux常用命令/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/SQL语句/">
+        <h2>
+            SQL语句
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>sql语句 每段都以;结尾，可添加换行，关键词间有空格，不区分大小写</p>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">查看所有数据库   show databases;</span><br><span class="line">连接数据库    mysql -u用户 -p</span><br><span class="line">创建数据库      create database 名字;</span><br><span class="line">创建数据库指定字符集    create database 名字 chaeacter set utf8;</span><br><span class="line">查看数据库详细   show create database 名字;</span><br><span class="line">删除数据库       drop database 名字;</span><br><span class="line">删除表           drop table 名字l;</span><br><span class="line">选中数据库     use 名字;</span><br><span class="line">查看所有表      show tables;</span><br><span class="line">创建表      creata table 名字 (字段1名 字段类型,字段2名 字段类型);</span><br><span class="line">查看表结构        show create table 名字  或   desc 名字</span><br><span class="line">创建表时指定表的字符集和引擎  create table 名字 (字段1 字段类型,字段2	字段类型)engine=myisam charset = utf8;</span><br><span class="line">修改表名称    rename table 原名 to 名字</span><br><span class="line">修改表的属性  alter table 名字 engine=myisam charset=gdk</span><br><span class="line">添加表的字段在最后     alter table 名字 add age int;</span><br><span class="line">添加表的字段在最前     alter table 名字 add fatherage int first;</span><br><span class="line">在表的某一个字段后添加   alter table 名字 add fathername varchar(10)after fatherage;</span><br><span class="line">删除表字段    alter table 名字 drop 字段名;</span><br><span class="line">修改字段名和类型    alter table 名字 change 原字段名 新字段名 新字段类型;</span><br><span class="line">修改类型和顺序      alter table 名字 modify 字段名 新字段类型 after 字段名 first alter table 名字 modify 字段名称 新字段类型;</span><br><span class="line">全表插入  insert into 名字 values(字段名 字段类型)</span><br><span class="line">指定字段插入   insert into 名字 (名,名,名)balues(类型,类型);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>查询语句</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查询所有字段 select * from 名;			</span><br><span class="line">查询指定字段 select(字段1,字段2)valuse(类型,类型)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>修改更新语句</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">修改全表  update 名 set</span><br><span class="line">修改指定条件  update 名 set math=50 where id=10</span><br><span class="line">删除指定条件   delete from 名 where id=10;</span><br><span class="line">删除表中的所有数据    delete from 名;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>主键</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">设置主键     create table student(id int primary ke age int);</span><br><span class="line">设置主键和自增   create table syudent (id int primarty key autoincrement,age int);</span><br><span class="line">删除主键   alter table users drop primary key;</span><br><span class="line">非空约束    not null          create table student(id int primary key auto_increment,age int not null);</span><br><span class="line">表字段注释  comment       create table user (id int comment &#x27;用户id&#x27;,age int comment &#x27;用户年龄&#x27;);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>mysql备份</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">删除二进制日志文件        mysql -u root -p 123123 -e &#x27;reset master&#x27;</span><br><span class="line">数据库备份           mysql -u root -p --databases 名字 &gt; /opt/dgf.sql</span><br><span class="line">备份所有数据库        mysql -u root -p --all-databases &gt; /opt/all-data.sql</span><br><span class="line">备份表             mysqldump -u root -p 数据库 表 &gt; /opt/表.sql</span><br><span class="line">还原数据表       mysql -u root -p 数据库 &lt; /opt/数据库</span><br><span class="line">将数据库下所有表结构导出       mysqldump -u root -p -d 数据库 &gt; /opt/数据库.sql</span><br><span class="line">导出单个表结构        mysqldump -u root -p -d 数据库 表 &gt; /opt/数据表.sql</span><br><span class="line">导出表数据不导出结构      mysqldump -u root -</span><br></pre></td></tr></table></figure>
+
+
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Mysql" style="color: #ffa2c4">
+                Mysql
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/SQL语句/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/Mysql数据库/">
+        <h2>
+            Mysql数据库
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>数据库是按照数据的结构，存储和管理数据的仓库</p>
+<p>数据库分为 <code>关系型数据库</code> 和 <code>非关系型</code> 数据库</p>
+<p>关系性数据库：sql数据库容易理解 使用方便 易于维护，缺点海量数据读写低，难以扩展</p>
+<p>非关系性数据库：nosql ，not only sql就是为了加快客户端访问速度时出现的</p>
+<hr>
+<p><strong>mysql存储原理</strong></p>
+<p>整体架构：</p>
+<p> 1.连接池：最上层负责和客户端进行连接</p>
+<p>2.sql接口：当sql语句进入mysql，会先到sql接口中，这一层是封装层</p>
+<p>3.解析器：这一层负责将sql语句进行拆分验证</p>
+<p>4.优化器：对sql查询的结果优化处理，产生多种执行计划。最终数据库会选择最优话的方案</p>
+<p>5.缓存：对要查询的sql语句进行hash后缓存</p>
+<p>6.存储引擎：mysql有很多种存储引擎，每一种存储引擎有不同的特性，他们负责组织文件存放位置，访问方法</p>
+<hr>
+<p><strong>下载安装mysql</strong></p>
+<p>网页搜索mysql官网</p>
+<p>点击DOWNLOADS，选择mysql community社区版根据需求下载</p>
+<p>mysql官网有三种安装方式：</p>
+<p>1.压缩包安装</p>
+<p>2.压缩包自带boost安装</p>
+<p>3.rpm包安装</p>
+<p>安装好以后尝试进入数据库，如果可以进入说明安装成功</p>
+<hr>
+<p><strong>SQL</strong></p>
+<p>Structured Query Language 结构化查询语言</p>
+<hr>
+<p><strong>面试常问</strong></p>
+<p>1.公司数据库是什么架构？</p>
+<p>我们公司是主从，那你们公司主挂了怎么办，从是不会替代主的</p>
+<p>前端去连服务器的时候连的是虚拟IP，前端的代码是会写到从里面的，这在一开始就写好了</p>
+<hr>
+<p>2.如何解决主从复制延迟？</p>
+<hr>
+<p>3.mysql主从模式有几种？</p>
+<p>第一种异步，速度快，但是对于数据安全比较低</p>
+<p>第二种半同步，相对比异步安全一点</p>
+<p>第三种全同步</p>
+<hr>
+<p>4.锁</p>
+<p>一般问的比较少，大致分为读锁，写锁，行锁，页锁。</p>
+<hr>
+<p>5.事物与隔离级别</p>
+<p>隔离级别</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">隔离级别                              脏读     不可重复读     幻读</span><br><span class="line">读未提交                              √          √           √</span><br><span class="line">读已提交                              x          √           √</span><br><span class="line">可重复读                               x          x           √</span><br><span class="line">可串行化                              x          x            x</span><br></pre></td></tr></table></figure>
+
+<p>ACID四大特性</p>
+<p> 原子性，一致性，隔离性，持久性</p>
+<hr>
+<p>6.索引</p>
+<p>索引的好处：1、帮助用户提高查询速度. 2、利用索引的唯一性来控制记录的唯一性. 3、可以加速表与表之间的连接. 4、降低查询中分组和排序的时间</p>
+<p>索引的坏处：1、存储索引占用磁盘空间 2、执行修改操作（insert、delete、update）产生索引维护</p>
+<p>索引是用什么数据结构的？</p>
+<p>B+树</p>
+<p>b+树，是b树的一种变体，查询性能更好</p>
+<p>mysql有哪些存储引擎，默认innoDB与 MylSAM区别</p>
+<p> InnoDB、MyISAM、Memory、Merge、Archive、CSV、BLACKHOLE 等</p>
+<ol>
+<li>InnoDB支持事务，MyISAM不支持，对于InnoDB每一条SQL语言都默认封装成事务，自动提交，这样会影响速度，所以最好把多条SQL语言放在begin和commit之间，组成一个事务； </li>
+<li>InnoDB支持外键，而MyISAM不支持。对一个包含外键的InnoDB表转为MYISAM会失败；</li>
+</ol>
+<p>索引有哪些类型，一定要把组合索引说出来，然后会问组合索引规则即最左原则</p>
+<p>​     普通索引index :加速查找</p>
+<p>唯一索引</p>
+<p> 主键索引：primary key ：加速查找+约束（不为空且唯一）</p>
+<p>  唯一索引：unique：加速查找+约束 （唯一）</p>
+<p>联合索引</p>
+<p>  -primary key(id,name):联合主键索引</p>
+<p>-unique(id,name):联合唯一索引</p>
+<p>  -index(id,name):联合普通索引</p>
+<p>全文索引fulltext :用于搜索很长一篇文章的时候，效果最好。</p>
+<p>空间索引spatial :了解就好，几乎不用</p>
+<hr>
+<p>7.SQL优化或者说什么时候索引失效</p>
+<p>避免使用*通配符“%”或者“_”作为查询字符串的第一个字符<br>在设计表时，把索引列设置为NOT NULL<br>Where子句中避免在索引列上使用计算<br>索引列上进行函数操作，索引失效<br>用&gt;&#x3D; 代替 &gt; 尽量不使用 &lt;&gt; 或者!&#x3D;<br>使用EXISTS代替 in 用not EXISTS 代替 not in</p>
+<p>1、like的模糊查询以%开头<br>2、条件中用or，即使其中有条件带索引，也不会使用索引查询<br>3、查询条件如果是<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%AD%97%E7%AC%A6%E4%B8%B2&spm=1001.2101.3001.7020">字符串</a>，不加引号会使索引失效<br>4、not null 不会使用索引， is null 会使用索引<br>5、使用 &lt;&gt; 或者!&#x3D;<br>6、in not in<br>7、在索引列上使用计算</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Mysql" style="color: #03a9f4">
+                Mysql
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/Mysql数据库/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/DNS解析过程/">
+        <h2>
+            DNS解析过程
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>网站的访问过程 DNS的解析过程</strong></p>
+<p>1.例如访问<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> 先查看本地电脑的DNS缓存</p>
+<p>2.如果本地没有对应的DNS缓存，客户端会查看本地的host文件</p>
+<p>3.如果没有，客户端会将域名交给本地填写的DNS，以上称为 <strong>递归查询</strong></p>
+<p>4.如果本地DNS，没有找到对应的域名或IP就会将请求交给根DNS</p>
+<p>5.根DNS服务器知道 .com服务器</p>
+<p> .com服务器 认识 baidu.com服务器，称为<strong>迭代查询</strong></p>
+<p>如果网站有备案拿肯定会有ip地址，如果没有就是没备案</p>
+<p>如果找到目标则交给本地DNS，本地DNS返回给客户端</p>
+<p>DNS的端口号是： 53</p>
+<p> 协议是： TCP UDP 相互传输时使用TCP协议，其他的时候使用 UDP</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/DNS" style="color: #00bcd4">
+                DNS
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/DNS解析过程/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/正则表达式/">
+        <h2>
+            正则表达式
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>sort    uniq    cut    grep    sed    正则表达式</strong></p>
+<p><strong>sort</strong></p>
+<p>经常用来排序,默认是以第一列排序,也可用来合并文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort 文件名</span><br></pre></td></tr></table></figure>
+
+<p>默认是从小到大</p>
+<p>如果要从大到小输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort -r 文件名</span><br></pre></td></tr></table></figure>
+
+<p>第一列数字如果是双数则需加入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort -n 文件名</span><br></pre></td></tr></table></figure>
+
+<p>有双数，从大到小</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort -rn 文件名</span><br></pre></td></tr></table></figure>
+
+<p>合并文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort -m 文件名 文件名 -o 新文件</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>uniq</strong></p>
+<p>uniq用来去重，去掉连续重复的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uniq 文件名</span><br></pre></td></tr></table></figure>
+
+<p>如果要去掉连续重复的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uniq -u 文件名</span><br></pre></td></tr></table></figure>
+
+<p>-c用来统计连续重复的次数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uniq -c 文件名</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>cut</strong></p>
+<p>切割文件内容</p>
+<p>选择文件的首字母输出</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut -c1 文件名</span><br></pre></td></tr></table></figure>
+
+<p>文件的第一个到第三个</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut -c1-3 文件名</span><br></pre></td></tr></table></figure>
+
+<p>取一字节输出，一个英文字母占1字节，一个中文占3字节</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut -b 1 文件名</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut -b 1-3 文件名</span><br></pre></td></tr></table></figure>
+
+<p>-d 指定分割符 -f6 指分完以后拿哪一列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut -d &quot;:&quot; -f6 文件名</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>grep</strong></p>
+<p>经常用来过滤</p>
+<p>-n 用来显示行号</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -n &quot;名字&quot; 路径文件</span><br></pre></td></tr></table></figure>
+
+<p>-c 用来显示有几行包含名字</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -c &quot;名字&quot; 路径文件</span><br></pre></td></tr></table></figure>
+
+<p>-A 显示文件内容的下一行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -A 1 &quot;名字&quot; 文件</span><br></pre></td></tr></table></figure>
+
+<p>-A 显示文件内容的下一行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -B 1 &quot;名字&quot; 文件</span><br></pre></td></tr></table></figure>
+
+<p>-C 显示文件的上一行和下一行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -C 1 &quot;名字&quot; 文件</span><br></pre></td></tr></table></figure>
+
+<p>-r 递归过滤文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -r &quot;名字&quot; 路径</span><br></pre></td></tr></table></figure>
+
+<p>-Lr 过滤内容，直接显示查询的文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -Lr &quot;名字&quot; 路径</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>sed</strong></p>
+<p>主要用来非交互的方式修改文件，当然远远不止修改</p>
+<p>对文件进行 增 删 改 查</p>
+<p>例如 vi 就是交互式，交互式可以称为串行，非交互式可以理解为并行</p>
+<p>Sed 语法  </p>
+<p> sed 选项  动作  文件名</p>
+<p>-i    修改源文件内容</p>
+<p>-n   打印匹配到的内容            </p>
+<p>-e   多个动作的时候</p>
+<p>​     动作       </p>
+<p>p       打印的意思 print</p>
+<p>d       删除的意思</p>
+<p>a      追加写入的意思</p>
+<p>i      插入的意思</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n &quot;p&quot; 文件名</span><br></pre></td></tr></table></figure>
+
+<p>如果要指定第二行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n &quot;2p&quot; 文件</span><br></pre></td></tr></table></figure>
+
+<p>也可以</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n -e 1p -e 3p 文件名</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n &quot;/内容/p&quot; 文件名</span><br></pre></td></tr></table></figure>
+
+<p>把内容替换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &quot;s/内容/替换的内容/g&quot; 文件</span><br></pre></td></tr></table></figure>
+
+<p>给内容写注释</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &quot;s/^/#/g&quot; 文件名</span><br></pre></td></tr></table></figure>
+
+<p>删除注释</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed - \i &quot;s/^#//g&quot; 文件名</span><br></pre></td></tr></table></figure>
+
+<p>追加写入下一行内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &quot;/内容/a 写入的内容&quot; 文件名 </span><br></pre></td></tr></table></figure>
+
+<p>追加写入下一行内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &quot;/内容/i 写入的内容&quot; 文件名 </span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>正则表达式</strong></p>
+<p>帮助你从文件中获取到精确的数据，在开发的语言里是通用的</p>
+<p>基础正则表达式</p>
+<p>^：以谁开头  ^root 以root开头</p>
+<p>$：以谁结尾   root$</p>
+<p>.：任意一个单个自符      比如g.d         .26个英文字母都可匹配到</p>
+<p>星： 匹配前边的字符出现0次到多次     go星d</p>
+<p>.星 : 所有</p>
+<p>\：转译符</p>
+<p>[abc] : 匹配括号中的任意一个字符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\[n\]   匹配前边的字符出现</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\[n，\]   匹配前边的字符最少出现n次</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\[,n\]    匹配前边的字符最多出现n次</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\[n,m\]    匹配前边的字符最少n次，最多m次</span><br></pre></td></tr></table></figure>
+
+
+
+<p>扩展正则表达式</p>
+<p>?</p>
+<ul>
+<li></li>
+</ul>
+<p>( )</p>
+<p>不能直接使用grep</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E &quot;内?容&quot; 文件 匹配前边的字符最少0次 最多一次</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E &quot;内+容&quot; 文件  匹配前边的字符最少1次</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E &quot;内(内容)容&quot; 文件 匹配括号中的内容</span><br></pre></td></tr></table></figure>
+
+
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/正则" style="color: #03a9f4">
+                正则
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/正则表达式/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/Gitlab与jenkins构建持续集成（CI）环境/">
+        <h2>
+            Gitlab与jenkins构建持续集成（CI）环境
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <h3 id="Gitlab-与Github"><a href="#Gitlab-与Github" class="headerlink" title="Gitlab 与Github"></a>Gitlab 与Github</h3><p>是一个代码托管平台</p>
+<p>起初开发人员都会将代码放到类似</p>
+<p>   git       svn       版本控制器</p>
+<p>使用git存放代码，如需查看代码还需要将代码拉取到本地</p>
+<p>随着时间的发展，开发人员逐渐使用gitlab  和 github</p>
+<p>不管是gitlab还是github他们的底层都是git开发的，两者都能存放代码</p>
+<p>gitlab和github都能通过浏览器去访问</p>
+<p>gitlab与github的区别</p>
+<p>如果代码存放到github上那么别人是可以看到你的项目，github也有私有的仓库，但是一个账户只能创建4个，超出则需要额外收费</p>
+<p>存放到gitlab别人则看不到，因为gitlab是存放到你本地服务器的</p>
+<p>gitlab有两个版本 </p>
+<p>gitlab-ce社区版(免费) gitlab-ee企业版(收费) 基本上在公司也是用免费的社区版</p>
+<h3 id="jenkins"><a href="#jenkins" class="headerlink" title="jenkins"></a>jenkins</h3><p>开发吧代码放到gitlab上，jenkins去gitlab上拖到本地，然后把代码发送到目标浏览器</p>
+<p>标题CI的意思是 devops</p>
+<p>​            dev&#x3D;开发       ops&#x3D;运维 连起来就是运维开发</p>
+<p>持续集成简称CI  :持续集成是指开发在代码的开发过程中可以频繁的将代码部署集成到gitlab主干，并进行自动化测试</p>
+<p>持续交付 : 在持续集成的基础上，将代码部署到预生产环境   称为CD</p>
+<p>持续部署：在持续交付的基础上，把代码部署到生产环境的过程自动化称为CD</p>
+<h2 id="实验环境部署"><a href="#实验环境部署" class="headerlink" title="实验环境部署"></a>实验环境部署</h2><p>准备三台机器</p>
+<p>gitlab    安装gitlab</p>
+<p>jenkins      安装jenkinx和apache</p>
+<p>Apache     安装apache</p>
+<p>​            gitlab主机内存要大一点不然会报错</p>
+<p>1.安装gitlab依赖：</p>
+<p>   yum install -y curl policycoreutils openssh-server                        openssh-clients postfix policycoreutils-python</p>
+<p>2.使用postfix发送邮件:</p>
+<p>​     systemctl enable postfix</p>
+<p>​    systemctl start postfix</p>
+<p>3.安装rpm包</p>
+<p>​    rpm -ivh 包</p>
+<ol start="4">
+<li>配置gitlab访问地址</li>
+</ol>
+<p>​          vi &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb  #修改gitlab外部访问地址</p>
+<p>​         external_url ‘<a target="_blank" rel="noopener" href="http://192.168.1.1’/">http://192.168.1.1’</a> </p>
+<p>​        可以修改成IP地址也可以修改为域名</p>
+<ol start="5">
+<li>重置gitlab</li>
+</ol>
+<p>​       Gitlab-ctl teconfigure</p>
+<ol start="6">
+<li>查看gitlab密码</li>
+</ol>
+<p>​        cat &#x2F;etc&#x2F;gitlab&#x2F;initial_root_password</p>
+<ol start="7">
+<li><p>禁止用户注册</p>
+<p>点击menu   设置   通用       注册限制全部取消</p>
+<hr>
+</li>
+</ol>
+<p>启动gitlab</p>
+<p>Gitlab-ctl stop</p>
+<p>Gitlab-ctl start</p>
+<p>Gitlab-ctl restart</p>
+<p>gitlab主配置文件</p>
+<p>日志地址:&#x2F;var&#x2F;opt&#x2F;gitlab</p>
+<p>服务地址:&#x2F;var&#x2F;opt&#x2F;gitlab</p>
+<p>仓库地址：&#x2F;var&#x2F;opt&#x2F;gitlab&#x2F;git-data</p>
+<h3 id="配置邮件报警"><a href="#配置邮件报警" class="headerlink" title="配置邮件报警"></a>配置邮件报警</h3><p>修改gitlab配置文件</p>
+<p>vi &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb</p>
+<p>smtp_enable     &#x3D;true</p>
+<p>smtp_address &#x3D; smtp.qq.com       smtp服务器</p>
+<p>smtp_port &#x3D; 465</p>
+<p>smtp_user_name &#x3D;      qq邮箱</p>
+<p>smtp_password   &#x3D;      邮箱授权码</p>
+<p>smtp_domain &#x3D;     qq.com      等待时间</p>
+<p>smtp_authentication &#x3D;  login</p>
+<p>smtp_tls &#x3D; true </p>
+<p>Gitlab_email_from &#x3D; 邮箱</p>
+<p>重载gitlab</p>
+<p>gitlab-ctl  reconfigure</p>
+<p>登陆控制台发送测试邮件</p>
+<p>gitlab-rails console</p>
+<p>输入</p>
+<p>Notify.test_email (‘邮箱’,’test’,’test’).deliver_now</p>
+<p>设置自动发送邮箱</p>
+<p>进入gitlab网页，点击menu   用户     修改默认用户邮箱</p>
+<p>gitlab用户在组中有5种权限</p>
+<p>Guest  Reporter  Developer Master Omer</p>
+<p>Guest：可以创建issue、发表评论，不能读写版本库</p>
+<p>Reporter：可以克隆代码，不能提交，QA(测试人员)、PM(主管或者产品经理》可以赋予这个权限</p>
+<p>Developer：可以克隆代码、开发、提交、push，RD(研发人员》可以赋子这个杈限</p>
+<p>Master：可以创建项目、添加tag、保护分支、添加项目成员、编辑项目，核心即负责人可以赋子这个杈限</p>
+<p>Owrer：可以设置项目访问权限-wisibility Leve 1、删除项目、迁移项目、管理组成员，开发組 leader 可以赋予这个杈限</p>
+<h4 id="开发人员如果要上传代码到gitlab上，需要在本机安装git"><a href="#开发人员如果要上传代码到gitlab上，需要在本机安装git" class="headerlink" title="开发人员如果要上传代码到gitlab上，需要在本机安装git"></a>开发人员如果要上传代码到gitlab上，需要在本机安装git</h4><p>打开gitbash   声明一下</p>
+<p>git conf ig –g1obal user.name “用户”</p>
+<p>git config –global user.email “邮箱”</p>
+<p>将项目拉取到本地</p>
+<p>git clone   仓库地址</p>
+<p>输入用户名和密码</p>
+<p>上传代码，进入项目文件，项目文件分三个区</p>
+<p>进入后是 工作区 还有暂存区和本地仓库 远程仓库</p>
+<p>git add .        将代码放到暂存区</p>
+<p>git commit -m “日志信息”     放到本地仓库</p>
+<p>Git push origin 分支    放到远程仓库</p>
+<h4 id="用图形方式克隆"><a href="#用图形方式克隆" class="headerlink" title="用图形方式克隆"></a>用图形方式克隆</h4><p>桌面右键 点击git gui here</p>
+<p>点击clone    existing  repository</p>
+<p>输入目标地址      输入本地路径</p>
+<p>上传代码</p>
+<p>点击rescan    stage changed     sign off   </p>
+<p>commit 输入日志信息</p>
+<p>使用 tortoisegit（小乌龟）拉去代码</p>
+<p>安装后右键点击git克隆</p>
+<p>输入项目地址，直接点击确定</p>
+<p>上传代码</p>
+<p>右键git提交输入日志信息，点击提交</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Git" style="color: #00bcd4">
+                Git
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/Gitlab与jenkins构建持续集成（CI）环境/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/hello-world/">
+        <h2>
+            Hello World
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2022/07/11/hello-world/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+             
+<div class="page-current">
+    <div class="prev">
+        
+        <a href="/">
+            <span class="page-num">
+                <svg class="fa-icon"><use xlink:href="#caret-left-solid"></use></svg>
+            </span>
+        </a>
+        
+    </div>
+    <div class="page-index">
+        
+        <span>
+            
+            
+            <a href="/">
+                <span class="page-num">
+                    1
+                </span>
+            </a>
+        </span>
+        
+        <span class="current">
+            2
+        </span>
+        
+    </div>
+    <div class="next">
+        
+    </div>
+</div>
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <div id="card-div">
+    <div class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src=" " alt="avatar">
+        </div>
+        <div class="name">
+            Eva
+        </div>
+        <div class="descriptions">
+            
+            <div class="description">
+                Description...
+            </div>
+            
+        </div>
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/1935157709">
+                    <i class="fa-brands fa-github fa-fw"></i>
+                </a>
+            </span>
+            
+        </div>
+        <div class="friend-links">
+            
+        </div>
+    </div>
+</div>
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 欢迎浏览
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Eva
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>

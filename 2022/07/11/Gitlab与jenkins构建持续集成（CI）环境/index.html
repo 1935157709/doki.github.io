@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Gitlab与jenkins构建持续集成（CI）环境 | 欢迎浏览</title>
+        <meta name="author" content="Eva">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">欢迎浏览</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;欢迎浏览</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>Gitlab与jenkins构建持续集成（CI）环境 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Git" style="color: #00bcd4">
+                    Git
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <h3 id="Gitlab-与Github"><a href="#Gitlab-与Github" class="headerlink" title="Gitlab 与Github"></a>Gitlab 与Github</h3><p>是一个代码托管平台</p>
+<p>起初开发人员都会将代码放到类似</p>
+<p>   git       svn       版本控制器</p>
+<p>使用git存放代码，如需查看代码还需要将代码拉取到本地</p>
+<p>随着时间的发展，开发人员逐渐使用gitlab  和 github</p>
+<p>不管是gitlab还是github他们的底层都是git开发的，两者都能存放代码</p>
+<p>gitlab和github都能通过浏览器去访问</p>
+<p>gitlab与github的区别</p>
+<p>如果代码存放到github上那么别人是可以看到你的项目，github也有私有的仓库，但是一个账户只能创建4个，超出则需要额外收费</p>
+<p>存放到gitlab别人则看不到，因为gitlab是存放到你本地服务器的</p>
+<p>gitlab有两个版本 </p>
+<p>gitlab-ce社区版(免费) gitlab-ee企业版(收费) 基本上在公司也是用免费的社区版</p>
+<h3 id="jenkins"><a href="#jenkins" class="headerlink" title="jenkins"></a>jenkins</h3><p>开发吧代码放到gitlab上，jenkins去gitlab上拖到本地，然后把代码发送到目标浏览器</p>
+<p>标题CI的意思是 devops</p>
+<p>​            dev&#x3D;开发       ops&#x3D;运维 连起来就是运维开发</p>
+<p>持续集成简称CI  :持续集成是指开发在代码的开发过程中可以频繁的将代码部署集成到gitlab主干，并进行自动化测试</p>
+<p>持续交付 : 在持续集成的基础上，将代码部署到预生产环境   称为CD</p>
+<p>持续部署：在持续交付的基础上，把代码部署到生产环境的过程自动化称为CD</p>
+<h2 id="实验环境部署"><a href="#实验环境部署" class="headerlink" title="实验环境部署"></a>实验环境部署</h2><p>准备三台机器</p>
+<p>gitlab    安装gitlab</p>
+<p>jenkins      安装jenkinx和apache</p>
+<p>Apache     安装apache</p>
+<p>​            gitlab主机内存要大一点不然会报错</p>
+<p>1.安装gitlab依赖：</p>
+<p>   yum install -y curl policycoreutils openssh-server                        openssh-clients postfix policycoreutils-python</p>
+<p>2.使用postfix发送邮件:</p>
+<p>​     systemctl enable postfix</p>
+<p>​    systemctl start postfix</p>
+<p>3.安装rpm包</p>
+<p>​    rpm -ivh 包</p>
+<ol start="4">
+<li>配置gitlab访问地址</li>
+</ol>
+<p>​          vi &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb  #修改gitlab外部访问地址</p>
+<p>​         external_url ‘<a target="_blank" rel="noopener" href="http://192.168.1.1’/">http://192.168.1.1’</a> </p>
+<p>​        可以修改成IP地址也可以修改为域名</p>
+<ol start="5">
+<li>重置gitlab</li>
+</ol>
+<p>​       Gitlab-ctl teconfigure</p>
+<ol start="6">
+<li>查看gitlab密码</li>
+</ol>
+<p>​        cat &#x2F;etc&#x2F;gitlab&#x2F;initial_root_password</p>
+<ol start="7">
+<li><p>禁止用户注册</p>
+<p>点击menu   设置   通用       注册限制全部取消</p>
+<hr>
+</li>
+</ol>
+<p>启动gitlab</p>
+<p>Gitlab-ctl stop</p>
+<p>Gitlab-ctl start</p>
+<p>Gitlab-ctl restart</p>
+<p>gitlab主配置文件</p>
+<p>日志地址:&#x2F;var&#x2F;opt&#x2F;gitlab</p>
+<p>服务地址:&#x2F;var&#x2F;opt&#x2F;gitlab</p>
+<p>仓库地址：&#x2F;var&#x2F;opt&#x2F;gitlab&#x2F;git-data</p>
+<h3 id="配置邮件报警"><a href="#配置邮件报警" class="headerlink" title="配置邮件报警"></a>配置邮件报警</h3><p>修改gitlab配置文件</p>
+<p>vi &#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb</p>
+<p>smtp_enable     &#x3D;true</p>
+<p>smtp_address &#x3D; smtp.qq.com       smtp服务器</p>
+<p>smtp_port &#x3D; 465</p>
+<p>smtp_user_name &#x3D;      qq邮箱</p>
+<p>smtp_password   &#x3D;      邮箱授权码</p>
+<p>smtp_domain &#x3D;     qq.com      等待时间</p>
+<p>smtp_authentication &#x3D;  login</p>
+<p>smtp_tls &#x3D; true </p>
+<p>Gitlab_email_from &#x3D; 邮箱</p>
+<p>重载gitlab</p>
+<p>gitlab-ctl  reconfigure</p>
+<p>登陆控制台发送测试邮件</p>
+<p>gitlab-rails console</p>
+<p>输入</p>
+<p>Notify.test_email (‘邮箱’,’test’,’test’).deliver_now</p>
+<p>设置自动发送邮箱</p>
+<p>进入gitlab网页，点击menu   用户     修改默认用户邮箱</p>
+<p>gitlab用户在组中有5种权限</p>
+<p>Guest  Reporter  Developer Master Omer</p>
+<p>Guest：可以创建issue、发表评论，不能读写版本库</p>
+<p>Reporter：可以克隆代码，不能提交，QA(测试人员)、PM(主管或者产品经理》可以赋予这个权限</p>
+<p>Developer：可以克隆代码、开发、提交、push，RD(研发人员》可以赋子这个杈限</p>
+<p>Master：可以创建项目、添加tag、保护分支、添加项目成员、编辑项目，核心即负责人可以赋子这个杈限</p>
+<p>Owrer：可以设置项目访问权限-wisibility Leve 1、删除项目、迁移项目、管理组成员，开发組 leader 可以赋予这个杈限</p>
+<h4 id="开发人员如果要上传代码到gitlab上，需要在本机安装git"><a href="#开发人员如果要上传代码到gitlab上，需要在本机安装git" class="headerlink" title="开发人员如果要上传代码到gitlab上，需要在本机安装git"></a>开发人员如果要上传代码到gitlab上，需要在本机安装git</h4><p>打开gitbash   声明一下</p>
+<p>git conf ig –g1obal user.name “用户”</p>
+<p>git config –global user.email “邮箱”</p>
+<p>将项目拉取到本地</p>
+<p>git clone   仓库地址</p>
+<p>输入用户名和密码</p>
+<p>上传代码，进入项目文件，项目文件分三个区</p>
+<p>进入后是 工作区 还有暂存区和本地仓库 远程仓库</p>
+<p>git add .        将代码放到暂存区</p>
+<p>git commit -m “日志信息”     放到本地仓库</p>
+<p>Git push origin 分支    放到远程仓库</p>
+<h4 id="用图形方式克隆"><a href="#用图形方式克隆" class="headerlink" title="用图形方式克隆"></a>用图形方式克隆</h4><p>桌面右键 点击git gui here</p>
+<p>点击clone    existing  repository</p>
+<p>输入目标地址      输入本地路径</p>
+<p>上传代码</p>
+<p>点击rescan    stage changed     sign off   </p>
+<p>commit 输入日志信息</p>
+<p>使用 tortoisegit（小乌龟）拉去代码</p>
+<p>安装后右键点击git克隆</p>
+<p>输入项目地址，直接点击确定</p>
+<p>上传代码</p>
+<p>右键git提交输入日志信息，点击提交</p>
+
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 欢迎浏览
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Eva
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>

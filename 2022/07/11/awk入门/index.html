@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Awk入门 | 欢迎浏览</title>
+        <meta name="author" content="Eva">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">欢迎浏览</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;欢迎浏览</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>Awk入门 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/awk" style="color: #03a9f4">
+                    awk
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <p><strong>awk讲解</strong></p>
+<p>awk是专门为文本处理设计的编程语言，是一门数据驱动的编程语言，与sed类似都是以数据驱动的行处理软件，主要用于<code>数据扫描、过滤、统计汇总</code>工作，数据可以来自标准输入、管道或者文件。现在使用的版本是1988年发布的<code>Gnu awk</code></p>
+<p><strong>基础语法</strong></p>
+<p>awk处理命令是逐行处理的，awk是一种处理文本文件的编程语言，<strong>文件的每行数据都被称为<code>记录</code><strong>，默认以</strong>空格</strong>或制表符为<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%88%86%E9%9A%94%E7%AC%A6&spm=1001.2101.3001.7020">分隔符</a>，**每条记录被分成若干<code>字段(列)</code>**，awk每次从文件中读取一条记录。</p>
+<p>命令   <strong>选项</strong>   参数    文件名  ，<strong>选项</strong>表示为可写可不写</p>
+<p>awk  [选项] ‘条件{动作}’  文件名      awk默认有一个选项-F，-F 是用来指定分隔符的，多个动作用分号隔开         {print $1;print $6:print $2}</p>
+<p>条件和动作之间可以有若干个空格隔开    {print      $1;print    $6:print      $2}</p>
+<p>例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head -1 /etc/password</span><br></pre></td></tr></table></figure>
+
+<p>显示为：</p>
+<p>root   : x:0:0:root:&#x2F;root:&#x2F;bin&#x2F;bash        取第一行显示有 7列</p>
+<p>输入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head -1 /etc/password | awk -F: &#x27;&#123;print $6&#125;&#x27;       </span><br></pre></td></tr></table></figure>
+
+<p>先取文件的第一行然后管道符，取第一行的第六列</p>
+<p>-F:  后面如果什么都不写以空格为分隔符</p>
+<p><strong>awk内置变量</strong></p>
+<p>常用的内置变量：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">变量名                       描述</span><br><span class="line">FILENAME         当前输入文档的名称</span><br><span class="line">FNR              当前输入文档的当前行号，尤其当有多个输入文档时有用</span><br><span class="line">NR               输入数据流的当前行号</span><br><span class="line"><span class="variable">$0</span>               当前行的全部数据内容</span><br><span class="line"><span class="variable">$n</span>...            当前行的第n个字短的内容（n&gt;=1）</span><br><span class="line">NF               当前记录（行）的字短（列）个数,统计每一行有多少列</span><br><span class="line">FS               字短分隔符，默认为空格过TAB制表符</span><br><span class="line">OFS              输出字段分隔符，默认为空格</span><br><span class="line">ORS              输出记录分隔符，默认为换行符\n</span><br><span class="line">RS               输入记录分隔符，默认为换行符\n</span><br></pre></td></tr></table></figure>
+
+<p>使用方法例如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">awk -F: <span class="string">&#x27;&#123;print NR&#125;&#x27;</span></span><br><span class="line">awk -F: <span class="string">&#x27;&#123;print FNR&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>自定义分隔符</strong></p>
+<p>awk -F’’[:,_]” ‘{print $1;print $2;print $3}’ 文件</p>
+<p>命令     选项     {}      </p>
+<p><strong>自定义变量</strong></p>
+<p>awk -v x&#x3D;”bob” -v y&#x3D;10 ‘{print x,y}’ &#x2F;tmp&#x2F;hosts</p>
+<p><strong>print指令</strong></p>
+<p>类似于linux 的echo，可以输出常量和变量</p>
+<p>常量：就是不是变量,需要加双引号</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk -F: <span class="string">&#x27;NR==1&#123;print &quot;当前用户名是&quot;,$1&#125;&#x27;</span> /etc/passwd</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>条件匹配</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">比较符号                         描述</span><br><span class="line">//                  全行数据正则匹配</span><br><span class="line">!//                 对全行数据正则匹配后取反</span><br><span class="line">～//                对特定数据正则匹配</span><br><span class="line">!~//                对特定数据正则匹配后取反</span><br><span class="line">==                  等于</span><br><span class="line">!=                  不等于</span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">                  大于</span></span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash">=                  大于等于</span></span><br><span class="line">&lt;                   小于</span><br><span class="line">&lt;=                  小于等于</span><br><span class="line">&amp;&amp;                  逻辑与,如A&amp;&amp;B,要求满足A并且满足B</span><br><span class="line">||                  逻辑或，如A||B，要求满足A或B</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>BEGIN和END</strong></p>
+<p><strong>数字计算</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">awk &#x27;BEGIN&#123;print 1+3&#125;&#x27; 1加3</span><br><span class="line">awk &#x27;BEGIN&#123;print 5-2&#125;&#x27; 5减2</span><br><span class="line">awk &#x27;BEGIN&#123;print 5*3&#125;&#x27; 5乘3</span><br><span class="line">awk &#x27;BEGIN&#123;print 5/3&#125;&#x27; 5除3</span><br><span class="line">awk &#x27;BEGIN&#123;print 5%3&#125;&#x27; 取🐟</span><br><span class="line">awk &#x27;BEGIN&#123;print 5**3&#125;&#x27; 5的三次方</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">awk &#x27;BEGIN&#123;x=1:y=2:print x+y&#125;&#x27; 变量不赐值默认为0</span><br></pre></td></tr></table></figure>
+
+
+
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 欢迎浏览
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Eva
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>

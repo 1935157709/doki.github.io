@@ -1,0 +1,1443 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>欢迎浏览</title>
+        <meta name="author" content="Eva">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">欢迎浏览</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;欢迎浏览</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        <div id="home-head">
+    <div id="home-background" style="background-image: url()"></div>
+    
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>欢迎浏览</h1>
+                <h3>Eva的blog</h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+    
+</div>
+
+<div id="home-posts-wrap" class=>
+    <div id="home-posts">
+        <div id="posts">
+            
+
+<div class="post">
+    <a href="/2022/07/11/Redis高性能数据库/">
+        <h2>
+            Redis高性能数据库
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>Redis 高性能数据库</strong></p>
+<p>在公司中经常用redis来做数据库缓存</p>
+<p>redis会把数据存到内存里</p>
+<hr>
+<p>常见的缓存数据库有：</p>
+<p>redis    </p>
+<p>memcache</p>
+<p>相同点：都是缓存数据库，都是以key-vlaue 的形式存储</p>
+<p>不同点：redis支持的数据持久化存在内存中的数据不会随着系统时间或服务器的重启而丢失，redis支持的数据类型相对较多</p>
+<p>memcache不支持数据持久化</p>
+<hr>
+<p>redis优点</p>
+<p>性能极高 redis支持超过100K+每秒的读写频率</p>
+<p>原子性 redis所有操作都是原子性，既所有操作要么成功要么失败不执行</p>
+<p>redis运行在内存中但是可以持久化到硬盘</p>
+<p>redis更像一个加强版memcache</p>
+<p>memcache 适合多读少写，大数据量的情况</p>
+<p>redis 适合用于对读写效率要求都很高，数据处理业务复杂和安全性要求较高的系统</p>
+<hr>
+<p>redis数据回收策略</p>
+<p>redis的回收策略用的LRU算法</p>
+<p>可以设置数据过期时间</p>
+<p>volatile-lru 挑选已经设置过期的数据，挑选最近最少使用的数据淘汰</p>
+<p>balatile-ttl 从已设置过期的数据里，挑选将要过期的数据</p>
+<p>allkeys-lru 从数据中挑选最近使用最少的数据淘汰</p>
+<p>allkeys-random 从数据中挑选任意数据淘汰</p>
+<p>no-enviction 禁止驱逐数据，不淘汰数据</p>
+<hr>
+<p>redis主从复制</p>
+<p>主从复制分为全量同步和增量同步</p>
+<p>全量同步：redis全量复制一般发生在从初始化阶段，这时从需要将主上的所有数据都复制一份</p>
+<p>1.从服务器连接主服务器，发送sync命令</p>
+<p>2.主服务器接受道sync命名后，开始执行BGSAVE 命令生成RDB文件并使用缓冲区记录后执行的所有写命令</p>
+<p>3.主服务器BGSAVE执行完后，向所有从服务器发送快照文件，并在发送期间继续记录被执行的命令</p>
+<p>4.从服务器收到	快照文件后丢弃所有旧数据，载入收到的快照</p>
+<p>5.主服务器快照发送完毕后开始向从服务器发送缓冲区的写命令</p>
+<p>6.从服务器完成对快照的载入，开始接受命令请求，并执行来自主服务器缓冲区的写命令</p>
+<hr>
+<p>redis哨兵集群</p>
+<p>redis哨兵和主从的区别</p>
+<p>主从：主挂了不可以替代主</p>
+<p>哨兵：主挂了从可以替代主</p>
+<p>工作进程</p>
+<p>监控：哨兵通过流言协议会不断的检查你的master和slave是否运作正常</p>
+<p>提醒：当被监控的某个redis节点出现问题时，哨兵可以通过api向管理员或者其他应用程序发送通知</p>
+<p>自动故障转移：当一个master不能正常工作时，哨兵通过投票协议会开始一次自动故障迁移操作，他会将其他一个slave升级为新的master 当客户端试图连接失效的master时，集群也会像客户端返回新的master的地址，使得集群可以使用现在的master替换失效的master</p>
+<hr>
+<p>redis数据持久化</p>
+<p>redis有两种数据持久化方式，默认是RDB持久化比AOF恢复速度快</p>
+<p>RDB劣势：RDB快照是一次全量备份，存储的是内存数据的二进制序列化形式，存储上非常紧凑，当进行快照持久化时。会开启一个子进程专门负责快照持久化，子进程会拥有父进程的内存数据，父进程修改内存子进程不会反应过来，所以在快照持久化期间修改的数据不会保存，可能丢失数据</p>
+<p>RDB 已快照的形式持久化文件</p>
+<p>三种持久化机制 sava bgsave 自动同步</p>
+<p>AOF 以文件的形式持久化，将每一条增删改操作写入文件当中</p>
+<p>每修改同步always</p>
+<p>每秒同步everysec</p>
+<p>no 随着操作系统的同步而同步</p>
+<p>优点，对比RDB，能够保证数据的安全</p>
+<p>AOF日志文件即使过大的时候，出现后台重写操作，也不会影响客户端的读写</p>
+<p>AOF日志通过可读的方式进行记录</p>
+<p>缺点：</p>
+<p>对于同一份数据来说，AOF日志文件通常比RDB数据快照文件更大</p>
+<p>redis默认的持久化方式时RDB，当两种持久化同时开启，AOF生效</p>
+<hr>
+<p>redis-cluster集群</p>
+<p>一般使用redis-cli 5.0以后的版本</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Redis" style="color: #ff7d73">
+                Redis
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/Redis高性能数据库/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/Raid入门/">
+        <h2>
+            Raid入门
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>RAID 讲解</strong></p>
+<p>RAID</p>
+<p>将一些硬盘逻辑上结合到一起，变成大容量硬盘</p>
+<p> RAID 分为   硬RAID 和 软RAID  </p>
+<p>​        硬RAID 就是在服务器没有装系统之前，先做RAID前提是服务器有RAID卡，开机服务器按win+R 就可以进入RAID界面，类似于BIOS </p>
+<p>​        软RAID 就是在服务器装完系统之后，利用软件安装RAID，没有RAID卡也可实现 </p>
+<p>  上面两者相比较当然是硬RAID 物理上要好一点,当然成本也高很多 </p>
+<p>RAID0  </p>
+<p>能够加快磁盘读写速度，但是不能备份，将两块硬盘逻辑上合到一起，最少需要2块硬盘</p>
+<p>RAID1 读写速度不会添加，但是有数据冗余备份</p>
+<p> RAID5 能加快读写速度，也有数据冗余备份。最少需要3块硬盘</p>
+<p>RAID10  RAID0 和RAID1 结合</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Raid" style="color: #00a596">
+                Raid
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/Raid入门/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/prometheus监控/">
+        <h2>
+            Prometheus监控
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>Prometheus 监控</strong></p>
+<p>Prometheus能更好的与容器和云平台配合，相对传统的监控有以下几个优点</p>
+<ol>
+<li><p>易于管理  go编译的二进制文件不存在任何第三方依赖问题，可以使用服务发现功能  类似于zabbix自动发现，zabbix处理大量服务器上架下架可能出现不稳定</p>
+</li>
+<li><p>监控服务内部运行状态</p>
+</li>
+<li><p>强大的查询语言，内置强大的promql</p>
+</li>
+<li><p>高效，使用时序数据库，zabbix使用关系性数据库，其采集的数据会以文件的形似存储在本地中，默认的是安装目录&#x2F;data</p>
+</li>
+<li><p>可扩展</p>
+</li>
+<li><p>方便集成    官方提供多种语言的客户端sdk，可以让应用程序纳入到监控系统中</p>
+</li>
+<li><p>可视化，自带一个ui界面，方便对数据进行查询。可以连接grafana</p>
+<hr>
+</li>
+</ol>
+<p><strong>exporte采集端</strong></p>
+<p>分为直接采集和间接采集</p>
+<p>直接采集，可以称为原生监控，例如k8s，cadvisor</p>
+<p>间接采集，是非原生监控，例如mysql exporter  cmx exporter</p>
+<hr>
+<p>AlertManager</p>
+<p>prometheus支持创建基于promql创建告警规则，</p>
+<p>如果满足定义的规则，则会产生一条告警信息，进入AlertManager进行处理</p>
+<hr>
+<p>pushgeteway</p>
+<p>prometheus数据采集使用pull方式进行设置的，内置必须保证prometheus server 和对应的exporter必须通信，当网络无法直接满足时，可以使用pushgateway来进行中转</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Prometheus" style="color: #00bcd4">
+                Prometheus
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/prometheus监控/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/awk入门/">
+        <h2>
+            Awk入门
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>awk讲解</strong></p>
+<p>awk是专门为文本处理设计的编程语言，是一门数据驱动的编程语言，与sed类似都是以数据驱动的行处理软件，主要用于<code>数据扫描、过滤、统计汇总</code>工作，数据可以来自标准输入、管道或者文件。现在使用的版本是1988年发布的<code>Gnu awk</code></p>
+<p><strong>基础语法</strong></p>
+<p>awk处理命令是逐行处理的，awk是一种处理文本文件的编程语言，<strong>文件的每行数据都被称为<code>记录</code><strong>，默认以</strong>空格</strong>或制表符为<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%88%86%E9%9A%94%E7%AC%A6&spm=1001.2101.3001.7020">分隔符</a>，**每条记录被分成若干<code>字段(列)</code>**，awk每次从文件中读取一条记录。</p>
+<p>命令   <strong>选项</strong>   参数    文件名  ，<strong>选项</strong>表示为可写可不写</p>
+<p>awk  [选项] ‘条件{动作}’  文件名      awk默认有一个选项-F，-F 是用来指定分隔符的，多个动作用分号隔开         {print $1;print $6:print $2}</p>
+<p>条件和动作之间可以有若干个空格隔开    {print      $1;print    $6:print      $2}</p>
+<p>例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head -1 /etc/password</span><br></pre></td></tr></table></figure>
+
+<p>显示为：</p>
+<p>root   : x:0:0:root:&#x2F;root:&#x2F;bin&#x2F;bash        取第一行显示有 7列</p>
+<p>输入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head -1 /etc/password | awk -F: &#x27;&#123;print $6&#125;&#x27;       </span><br></pre></td></tr></table></figure>
+
+<p>先取文件的第一行然后管道符，取第一行的第六列</p>
+<p>-F:  后面如果什么都不写以空格为分隔符</p>
+<p><strong>awk内置变量</strong></p>
+<p>常用的内置变量：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">变量名                       描述</span><br><span class="line">FILENAME         当前输入文档的名称</span><br><span class="line">FNR              当前输入文档的当前行号，尤其当有多个输入文档时有用</span><br><span class="line">NR               输入数据流的当前行号</span><br><span class="line"><span class="variable">$0</span>               当前行的全部数据内容</span><br><span class="line"><span class="variable">$n</span>...            当前行的第n个字短的内容（n&gt;=1）</span><br><span class="line">NF               当前记录（行）的字短（列）个数,统计每一行有多少列</span><br><span class="line">FS               字短分隔符，默认为空格过TAB制表符</span><br><span class="line">OFS              输出字段分隔符，默认为空格</span><br><span class="line">ORS              输出记录分隔符，默认为换行符\n</span><br><span class="line">RS               输入记录分隔符，默认为换行符\n</span><br></pre></td></tr></table></figure>
+
+<p>使用方法例如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">awk -F: <span class="string">&#x27;&#123;print NR&#125;&#x27;</span></span><br><span class="line">awk -F: <span class="string">&#x27;&#123;print FNR&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>自定义分隔符</strong></p>
+<p>awk -F’’[:,_]” ‘{print $1;print $2;print $3}’ 文件</p>
+<p>命令     选项     {}      </p>
+<p><strong>自定义变量</strong></p>
+<p>awk -v x&#x3D;”bob” -v y&#x3D;10 ‘{print x,y}’ &#x2F;tmp&#x2F;hosts</p>
+<p><strong>print指令</strong></p>
+<p>类似于linux 的echo，可以输出常量和变量</p>
+<p>常量：就是不是变量,需要加双引号</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk -F: <span class="string">&#x27;NR==1&#123;print &quot;当前用户名是&quot;,$1&#125;&#x27;</span> /etc/passwd</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>条件匹配</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">比较符号                         描述</span><br><span class="line">//                  全行数据正则匹配</span><br><span class="line">!//                 对全行数据正则匹配后取反</span><br><span class="line">～//                对特定数据正则匹配</span><br><span class="line">!~//                对特定数据正则匹配后取反</span><br><span class="line">==                  等于</span><br><span class="line">!=                  不等于</span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">                  大于</span></span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash">=                  大于等于</span></span><br><span class="line">&lt;                   小于</span><br><span class="line">&lt;=                  小于等于</span><br><span class="line">&amp;&amp;                  逻辑与,如A&amp;&amp;B,要求满足A并且满足B</span><br><span class="line">||                  逻辑或，如A||B，要求满足A或B</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>BEGIN和END</strong></p>
+<p><strong>数字计算</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">awk &#x27;BEGIN&#123;print 1+3&#125;&#x27; 1加3</span><br><span class="line">awk &#x27;BEGIN&#123;print 5-2&#125;&#x27; 5减2</span><br><span class="line">awk &#x27;BEGIN&#123;print 5*3&#125;&#x27; 5乘3</span><br><span class="line">awk &#x27;BEGIN&#123;print 5/3&#125;&#x27; 5除3</span><br><span class="line">awk &#x27;BEGIN&#123;print 5%3&#125;&#x27; 取🐟</span><br><span class="line">awk &#x27;BEGIN&#123;print 5**3&#125;&#x27; 5的三次方</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">awk &#x27;BEGIN&#123;x=1:y=2:print x+y&#125;&#x27; 变量不赐值默认为0</span><br></pre></td></tr></table></figure>
+
+
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/awk" style="color: #00a596">
+                awk
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/awk入门/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/nginx服务/">
+        <h2>
+            Nginx服务
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>web 服务 nginx</strong></p>
+<p>nginx是用来解析网页的一个服务，也可以作为反向代理服务器</p>
+<p>nginx支持负载均衡，配置起来比httpd简单，既支持4层，又支持7层</p>
+<p>4层：传输层</p>
+<p>7层：应用层</p>
+<hr>
+<p><strong>nginx安装</strong></p>
+<p>1.先安装wget</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y wget</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.安装nginx依赖组件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc pcre pcre-devel zlib zlib-devel openssl openssl-deve</span><br></pre></td></tr></table></figure>
+
+<p>​     组件说明：</p>
+<p>​    gcc：</p>
+<p>可以编译C，C++ada，object C和java等语言</p>
+<p>​    Pcre pure-devel:</p>
+<p> Pcre 是一个perl库，包括perl兼容的正则表达式库，nginx的http模块使用pcre来解析正则表达式，所以需要安装pcre库</p>
+<p>  zlib zlib-devel：</p>
+<p>zlib 库提供了很多种压缩方式和解压缩方式nginx使用zlib对httpd包内容进行gzip所以安装</p>
+<p>  openssl openssl-devel：</p>
+<p>openssl 让nginx支持https协议，是web安全通信的基石，没有openssl，可以说我们的信息都是在裸奔</p>
+<p>3.然后去浏览器搜索nginx，进入官网点击download</p>
+<p>mainline version            stable version        legacy version</p>
+<p>开发版测试版                      稳定版                       以前的版本</p>
+<p>将nginx压缩包解压，进入nginx目录输入</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-http_realip_module</span><br></pre></td></tr></table></figure>
+
+<p>–prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx:</p>
+<p>指定nginx的安装目录</p>
+<p>–with-http_ssl_module：</p>
+<p>让nginx支持https协议，支持ssl证书</p>
+<p>–with-http_realip_module：</p>
+<p>启用realip模块，让客户端获取ip地址</p>
+<p>4.安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>5.ngix启动脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/nginx.service</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=nginx - high performance web server</span><br><span class="line">Documentation=http://nginx.org/en/docs</span><br><span class="line">After=network.target remote-fs.target nss-lookup.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">PIDFile=/usr/local/nginx/nginx.pid</span><br><span class="line">ExecStartPre=/usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf</span><br><span class="line">ExecStart=/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</span><br><span class="line">ExecReload=/bin/kill -s HUP $MAINPID</span><br><span class="line">ExecStop=/bin/kill -s QUIT $MAINPID</span><br><span class="line">PrivateTmp=true</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>6.制作软链接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/nginx/sbin/nginx /usr/local/sbin</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p><strong>nginx配置文件</strong></p>
+<p>如果你的nginx使用yum安装的那么nginx主配置文件在&#x2F;etc&#x2F;nginx&#x2F;nginx.conf 整个文件的类型是以区块组织的，一般每个区块以一对大括号划分{}</p>
+<p>conf：配置文件</p>
+<p>html：网站存放路径</p>
+<p>logs：存放nginx日志            </p>
+<p>sbin：nginx命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi nginx.conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &#x27;/^$/d&#x27; ngindx.conf   去除注释</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>worker_processes 1;</p>
+<p>用来指定工作进程，根据cpu核心设置                全局部分</p>
+<hr>
+<p>events {</p>
+<p>   Worker_connections 1024;           events部分,用来指定每个进程最大的连接             </p>
+<p>}</p>
+<hr>
+<p>http {                                                  http大模块，可以有多个server模块,一个             </p>
+<p>​                                               server模块代表一个虚拟主机,server模块又包含        </p>
+<p>​                                                 location（主机）</p>
+<p>​    </p>
+<hr>
+<p>include    mime.types ;               指定nginx能够处理哪些类型的数据，这个文 </p>
+<p>​                                                       件在默认的安装路径</p>
+<p>​                                                          &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;mime&#x2F;types</p>
+<hr>
+<p>Sendfile     on;                            用来开启0拷贝，加快文件调取的速度</p>
+<hr>
+<p>keepalive_timeout        65;                链接超时时间</p>
+<hr>
+<hr>
+<p><strong>nginx日志配置</strong></p>
+<p>​                      Request</p>
+<p>客户端       》〉》〉     服务端</p>
+<p>​                〈《《《</p>
+<p>​                     Response</p>
+<p>Request  请求报文  请求行，请求头部，请求数据</p>
+<p>response   响应报文    状态吗，消息报头，响应文</p>
+<p>日志格式</p>
+<p>主配置文件里，默认是有注释的，但可以把注释去除</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">log_format  main    格式化日志</span><br><span class="line">&#x27;$remote_addr   客户端ip地址</span><br><span class="line">$remote_user    客户端用户名</span><br><span class="line">[$time_local]    本地时间</span><br><span class="line">$request     请求的协议，包含请求的方法 时间 资源</span><br><span class="line">$status     状态码</span><br><span class="line">$body_bytes_sent 传输的数据大小</span><br><span class="line">$http_referer   http上一级页面，防盗链，用户行为分析</span><br><span class="line">$http_user_agent    客户端访问设备</span><br><span class="line">$http_x_forwarded_for  请求携带的ip地址</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>log_format  main  ‘$remote_addr - $remote_user [$time_local] “$request” ‘<br>                                ‘$status $body_bytes_sent “$http_referer” ‘<br>                              ‘“$http_user_agent” “$http_x_forwarded_for”‘;</p>
+<hr>
+<p><strong>nginx状态监控</strong></p>
+<p>在安装编译nginx时输入，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--with-http_syub_syatus_module </span><br></pre></td></tr></table></figure>
+
+<p>记录nginx客户端基本访问状态信息</p>
+<p>具体配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location /mystatus &#123;</span><br><span class="line">stub_syatus on;</span><br><span class="line">access_log off;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>nginx状态监控相对来说没什么太大作用</p>
+<hr>
+<p><strong>nginx下载站点</strong></p>
+<p>可供用户下载资源的网站</p>
+<p>配置方法：</p>
+<p>在主配置文件加入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">autoindex on | off;   自动索引</span><br><span class="line">http    server    location三个区域都可用</span><br></pre></td></tr></table></figure>
+
+<p>让网页显示的文件用KB MB GB 显示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">autoindex-exact_size off;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>nginx访问限制</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">limit_conn_module</span><br><span class="line">模块可以限制nginx服务器所承受的单个客户端单个IP地址在单一时间所发起的连接数量</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">limit_rep_module</span><br><span class="line">模块可以限制nginx服务器承受的单个客户端单个IP地址在同一时间所发起的请求数量</span><br><span class="line"></span><br><span class="line">      加入到http区域</span><br></pre></td></tr></table></figure>
+
+<p>Limit : 限制的意思</p>
+<p>conn:链接的意思</p>
+<p>module: 模块</p>
+<p>查看nginx都装了哪些模块:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat auto/options | grep YES</span><br></pre></td></tr></table></figure>
+
+<p>安装命令ab，可以模拟请求</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install httpd-tools</span><br></pre></td></tr></table></figure>
+
+<p>-n 请求</p>
+<p>-c 并发量</p>
+<p>格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令   选项  参数  地址</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>nginx虚拟主机</strong></p>
+<p>通过修改主配置文件实现多域名访问不同页面</p>
+<p>修改配置文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server模块下修改</span><br><span class="line"></span><br><span class="line">server——name  域名</span><br><span class="line">root  页面路径</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p><strong>nginx访问控制</strong></p>
+<p>两种访问控制，一种基于IP，一种基于用户登陆</p>
+<p>有一定局限性，如果客户端通过代理服务器访问，则限制失效</p>
+<p>http_access_module        IP</p>
+<p>http_auth_basic_module          用户登陆</p>
+<p>拒绝某一IP登陆：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server下修改</span><br><span class="line"></span><br><span class="line">deny   地址;</span><br><span class="line">allow  all;</span><br></pre></td></tr></table></figure>
+
+<p>x_forwarded_for  记录真实IP地址</p>
+<p>客户端通过代理访问web服务器，代理记住了客户端真实IP，web服务器记住了客户端真实地址和代理真实地址，只要开启了x_forwarded_for 不管客户端经过几层代理，最后都会被web服务器记录到</p>
+<p>安装认证模块：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install httpd-tools</span><br></pre></td></tr></table></figure>
+
+
+
+<p>创建一个用户名密码文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">htpasswd -c /usr/local/nginx/conf/文件   用户名</span><br></pre></td></tr></table></figure>
+
+<p>将用户名密码文件加入nginx配置文件里：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">auth_basic &quot;登陆提示语&quot;;</span><br><span class="line">auth_basic_user_file;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>nginx location&#x2F;区别</strong></p>
+<p>proxy_pass模块，默认是安装的</p>
+<p>首先配置反向代理：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">server下配置</span><br><span class="line"></span><br><span class="line">proxy_pass http://代理地址/;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>nginx静态资源</strong></p>
+<p>静态资源：  .html    .css   .js等</p>
+<p>动态资源：  php等</p>
+<p>优化网页修改配置文件,http模块</p>
+<ol>
+<li><p>sendfile on;   称为0拷贝，提升文件读取速度</p>
+</li>
+<li><p>提高网络传输速率 tcp_nopush on;</p>
+</li>
+<li><p>提高网络传输的实时性  tcp_nodelay on;</p>
+<hr>
+</li>
+</ol>
+<p><strong>静态文件压缩</strong></p>
+<p>客户端浏览器向服务端访问数据，服务端接收到数据向客户端发送数据，进行数据压缩，能够有效的节省网络带宽</p>
+<p>gzip 压缩语法，可在http模块下更改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gzip   on;</span><br></pre></td></tr></table></figure>
+
+<p>gzip压缩比率</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gzip_comp_level 1;</span><br><span class="line">数字越高压缩比率越大，并不是比率越大越好</span><br></pre></td></tr></table></figure>
+
+<p> gzip版本号</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gzip_http_version 1.1;</span><br></pre></td></tr></table></figure>
+
+<p> gzip 压缩类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gzip_types 类型</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<hr>
+<p><strong>面试考点</strong>：</p>
+<p>为什么nginx用的比httpd多？</p>
+<p>1.nginx抗并发比httpd好        httpd刚出的时候抗并发是2万</p>
+<p>​                                                  nginx是5万</p>
+<p>2.nginx在处理请求时是异步非阻塞，使用epoll作为开发模型</p>
+<p>httpd是同步阻塞的，使用select作为开发模型</p>
+<p>不管是nginx 还是httpd 都是多进程的</p>
+<p>nginx有一个主进程和一个子进程，主进程不工作，把工作交给子进程进行</p>
+<p>多个链接对应一个进程</p>
+<p>httpd有多个进程，一个链接对应一个进程</p>
+<p>3.nginx配置文件在哪？</p>
+<p>源码安装一般在你安装目录下</p>
+<p>如果用yum安装，那么是在etc下有个nginx.conf</p>
+<p>4.nginx常用模块</p>
+<p>两种访问控制，一种基于IP，一种基于用户登陆</p>
+<p>http_access_module        IP</p>
+<p>http_auth_basic_module          用户登陆</p>
+<ol start="5">
+<li><p>你在上家公司对nginx做过哪些优化，可选择性回答</p>
+<p>没有做过优化，数据很正常不卡顿</p>
+<p>磁盘很正常</p>
+<p>首选要确定什么原因造成的卡顿，一般做过</p>
+<p>提高文件读取速度：   sendfile</p>
+</li>
+</ol>
+<p>​       提高网络传输效率：     nopush</p>
+<p>​       提高网络传输的实时性：   nodelay</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/nginx" style="color: #00bcd4">
+                nginx
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/nginx服务/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/tomcat服务/">
+        <h2>
+            Tomcat服务
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>TomCat 应用及部署</strong></p>
+<p>Tomcat 和 httpd 都隶属于apache公司</p>
+<p>tomcat 也是一个web服务，公司经常用来解析jsp页面</p>
+<p>java代码需要部署到tomcat服务</p>
+<p>  tomcat与java的关系</p>
+<p>  tomcat需要调用java运行环境才能运行</p>
+<p><strong>TomCat目录</strong></p>
+<p>bin：存放启动和关闭tomcat脚本</p>
+<p>conf：存放不同的配置文件</p>
+<p>doc：存放tomcat文档</p>
+<p>lib&#x2F;japser&#x2F;common：存放tomcat运行需要的库文件</p>
+<p>logs：存放tomcat执行的log文件</p>
+<p>src：存放tomcat的源代码</p>
+<p>webapps：tomcat的主要web发布目录</p>
+<p>work：存放jsp编译后产生的class文件</p>
+<p>&#x2F;conf&#x2F;server.xml主配置文件架构</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">server</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">service</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Connector</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Engine</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">Realm</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">Realm</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">Host</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Valve</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">Host</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Engine</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">service</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">server</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>tomcat双实例只需要把service区域复制一份到后面，并把端口改一下就可以</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Tomcat" style="color: #00a596">
+                Tomcat
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/tomcat服务/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/ansible自动化运维/">
+        <h2>
+            Ansible自动化运维
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>Ansible 自动化运维</strong></p>
+<p>常见的自动化运维工具有：ansible     saltstack   puppet</p>
+<p>puppet已经淘汰，ansible比saltack简单</p>
+<p>ansible不需要单独安装客户端，也不需要任何服务</p>
+<p>ansible不需要启动，它通过远程ssh协议操控服务器</p>
+<p>如果不知道服务器ssh远程的密码，则可以一开始在服务器上安装远程vnc</p>
+<hr>
+<p><strong>ansible结构</strong></p>
+<p>ansible有一个主机清单结构，默认的主机清单在&#x2F;etc&#x2F;ansible&#x2F;hosts</p>
+<p>还有core modules核心模块，核心模块中有很多模块，例如command模块 yum模块  user模块，ansible自带的模块就叫做核心模块</p>
+<p>custom modules 模块，自定义模块可以根据用户需求写模块，可以使用shell语言或python语言来写</p>
+<p>plugins 还有一些插件，模块功能的补充，有连接类型插件，循环插件，变量插件，过滤插件，插件功能用的比较少</p>
+<p>API 接口，提供给第三方程序调用应用程序编程接口</p>
+<p>Playbooks 剧本模块，类似linux脚本</p>
+<hr>
+<p><strong>安装</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1. yum -y install wget</span><br><span class="line"></span><br><span class="line">2. 安装阿里源</span><br><span class="line">3. yum install epel-release</span><br><span class="line"></span><br><span class="line">4. Yum list | grep ansible</span><br><span class="line"></span><br><span class="line">5. yum -y install ansible</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>编写主机清单</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ansible/hosts</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>​        </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">编写一个组</span><br><span class="line"></span><br><span class="line">​     [zu]</span><br><span class="line"></span><br><span class="line">  地址       ansible_ssh_port=22   ansible_ssh_user=“root” ansible_ssh_pass=“密码”</span><br><span class="line"></span><br><span class="line"> 地址       ansible_ssh_port=22   ansible_ssh_user=“root” ansible_ssh_pass=“密码”</span><br></pre></td></tr></table></figure>
+
+
+
+<p>主机清单里写入服务器账户和密码相对不安全，可以设置免密登陆</p>
+<p>首先创建主机私钥公钥</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+
+<p>把公钥传给操作机</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ssh-copy-id root@操作机</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>编写host_key</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ansible/ansible.cfg</span><br></pre></td></tr></table></figure>
+
+<p>找到hostkey 把井号去掉</p>
+<hr>
+<p><strong>Ansible 语法</strong></p>
+<p>Ansible 组  主机ip    -m调用模块 -a命令 -o单行输出</p>
+<p>输出绿色表示成功</p>
+<p>输出黄色表示不确定，源数据和目标数据不一致</p>
+<p>输出紫色并不代表输入失败，要看具体情况</p>
+<p>输出红色表示错误</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/ansible" style="color: #00a596">
+                ansible
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/ansible自动化运维/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/zabbix状态监控/">
+        <h2>
+            Zabbix状态监控
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>zabbix状态监控</strong></p>
+<p>1.系统层面监控</p>
+<p>监控运行内存，cpu占用，网络 磁盘 tcp的连接状态</p>
+<p>2.应用监控 </p>
+<p> 监控程序是否正常运行，通过进程和端口来监控</p>
+<p>还可以监控应用的性能</p>
+<hr>
+<p>运维常用的监控软件：</p>
+<p>nagios      cacti      ganglia     promethues     zabbix      open—falcon</p>
+<p>zabbix监控软件：是一个C&#x2F;S架构，也是一个B&#x2F;S架构 zabbix的前段页面是由PHP写的</p>
+<p>C&#x2F;S架构：客户端和服务端</p>
+<p>B&#x2F;S架构：可以通过浏览器访问</p>
+<hr>
+<p><strong>zabbix安装</strong></p>
+<p>安装要求</p>
+<p>web服务*1</p>
+<p>PHP*1</p>
+<p>Mysql*1</p>
+<p><strong>Centos7安装Zabbix 5.0安装</strong></p>
+<p>一、系统环境准备</p>
+<p>1、关闭防火墙（可以选择开放对应的端口，默认为tcp&#x2F;udp 10050、10051）</p>
+<p>systemctl stop firewalld &amp;&amp; systemctl disable firewalld</p>
+<p>2、关闭SELinux：</p>
+<p>setenforce 0</p>
+<p>sed -i ‘s&#x2F;SELINUX&#x3D;enforcing&#x2F;SELINUX&#x3D;disabled&#x2F;‘ &#x2F;etc&#x2F;selinux&#x2F;config</p>
+<p>3、重启reboot</p>
+<p>二、安装并配置zabbix</p>
+<p>1、安装 zabbix rpm 源,使用阿里云 zabbix 源</p>
+<p>rpm -Uvh <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/zabbix/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm">https://mirrors.aliyun.com/zabbix/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm</a></p>
+<p>yum clean all &amp;&amp; yum makecache fast</p>
+<p>2、安装zabbix服务端组件 zabbix server 和 agent</p>
+<p>yum install zabbix-server-mysql zabbix-agent -y</p>
+<p>3、安装zabbix前端组件</p>
+<p>yum install centos-release-scl -y</p>
+<p>4、编辑配置文件 vi &#x2F;etc&#x2F;yum.repos.d&#x2F;zabbix.repo,将[zabbix-frontend]下的 enabled 改为 1（1-启用；0-不启用）</p>
+<p>5、安装zabbix前端页面、初始数据库、PHP及httpd组件</p>
+<p>yum install zabbix-web-mysql-scl zabbix-apache-conf-scl -y</p>
+<p>三、安装并配置MySQL数据库</p>
+<p>1、安装 centos7 默认的 mariadb 数据库</p>
+<p>yum install mariadb-server -y</p>
+<p>2、启动数据库，并配置开机自动启动</p>
+<p>systemctl enable –now mariadb</p>
+<p>3、使用以下命令初始化 mariadb 并配置 root 密码</p>
+<p>mysql_secure_installation</p>
+<p>4、使用 root 用户进入 mysql，并建立 zabbix 数据库，注意数据库编码</p>
+<p>create database zabbix character set utf8 collate utf8_bin;</p>
+<p>create user zabbix@localhost identified by ‘PW@2021’;</p>
+<p>grant all privileges on zabbix.* to zabbix@localhost;</p>
+<p>quit;</p>
+<p>5、使用以下命令导入 zabbix 数据库，zabbix 数据库用户为 zabbix，密码为 PW@2021</p>
+<p>zcat &#x2F;usr&#x2F;share&#x2F;doc&#x2F;zabbix-server-mysql*&#x2F;create.sql.gz | mysql -uzabbix -p zabbix</p>
+<p>四、zabbix配置初始化</p>
+<p>1、配置数据库连接信息</p>
+<p>修改 zabbix server 配置文件vi &#x2F;etc&#x2F;zabbix&#x2F;zabbix_server.conf 里的数据库密码</p>
+<p>DBPassword&#x3D;PW@2021</p>
+<p>2、配置时区信息</p>
+<p>vi &#x2F;etc&#x2F;opt&#x2F;rh&#x2F;rh-php72&#x2F;php-fpm.d&#x2F;zabbix.conf ,修改时区</p>
+<p>php_value[date.timezone] &#x3D; Asia&#x2F;Shanghai</p>
+<p>3、配置字体，避免前台监控图形中文乱码</p>
+<p>yum -y install wqy-microhei-fonts</p>
+<p>cp &#x2F;usr&#x2F;share&#x2F;fonts&#x2F;wqy-microhei&#x2F;wqy-microhei.ttc &#x2F;usr&#x2F;share&#x2F;fonts&#x2F;dejavu&#x2F;DejaVuSans.ttf  </p>
+<p>4、启动zabbix相关服务并设置开机自启动</p>
+<p>systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm</p>
+<p>systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm</p>
+<p>5、浏览器上访问前端，进行初始化安装</p>
+<p>使用浏览器访问<a target="_blank" rel="noopener" href="http://xxxx/zabbix">http://xxxx/zabbix</a></p>
+<p>输入刚配置的数据库 zabbix 用户的密码:PW@2021</p>
+<p>6、登录账号为 <strong>Admin</strong>，密码： <strong>zabbix</strong></p>
+<p>进入系统后，默认是英文显示，点击左下角User settings，设置语言为中文即可</p>
+<p>vi &#x2F;etc&#x2F;zabbix&#x2F;zabbix_agentd.conf </p>
+<p>service Zabbix-agent restart</p>
+<p>systemctl restart zabbix-agent.service</p>
+<p>排错：</p>
+<p>Can’t open PID file &#x2F;run&#x2F;zabbix&#x2F;zabbix_server.pid (yet?) after start: No such file or directory</p>
+<p>cat &#x2F;var&#x2F;log&#x2F;zabbix&#x2F;zabbix_server.log</p>
+<p> tail -f &#x2F;var&#x2F;log&#x2F;messages </p>
+<p>vi &#x2F;etc&#x2F;zabbix&#x2F;zabbix_server.conf</p>
+<p>PidFile&#x3D;&#x2F;tmp&#x2F;zabbix_server.pid</p>
+<p>PidFile&#x3D;&#x2F;var&#x2F;run&#x2F;zabbix&#x2F;zabbix_server.pid</p>
+<p>开启防火墙：</p>
+<p> firewall-cmd –zone&#x3D;public –add-port&#x3D;10050&#x2F;tcp –permanent</p>
+<p>firewall-cmd –zone&#x3D;public –add-port&#x3D;10050&#x2F;udp –permanent</p>
+<p>firewall-cmd –zone&#x3D;public –add-port&#x3D;10051&#x2F;tcp –permanent</p>
+<p>firewall-cmd –zone&#x3D;public –add-port&#x3D;10051&#x2F;udp –permanent</p>
+<p>firewall-cmd –zone&#x3D;public –add-port&#x3D;80&#x2F;tcp –permanent</p>
+<p> systemctl restart firewalld</p>
+<p>cat &#x2F;etc&#x2F;firewalld&#x2F;zones&#x2F;public.xml</p>
+<p><strong>zabbix主动被动模式</strong></p>
+<p>zabbix默认是使用被动模式</p>
+<p>主动：被监控端将数据主动发送给服务端，端口号10051持续监听</p>
+<p>被动：服务端定时向被监控端取数据端口号10050</p>
+<hr>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/zabbix" style="color: #00bcd4">
+                zabbix
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/zabbix状态监控/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/ansible角色/">
+        <h2>
+            Ansible角色
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <h1 id="ansible-角色"><a href="#ansible-角色" class="headerlink" title="ansible 角色"></a><strong>ansible 角色</strong></h1><hr>
+<h5 id="基本语法创建一个-yaml-或-yml文件"><a href="#基本语法创建一个-yaml-或-yml文件" class="headerlink" title="基本语法创建一个 .yaml 或 .yml文件"></a>基本语法创建一个 .yaml 或 .yml文件</h5><p>​      例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- -</span><br><span class="line">- hosts: 192.168.100.210</span><br><span class="line">remote_user: root </span><br><span class="line">tasks:</span><br><span class="line">- name:</span><br><span class="line">&quot;制作yum源”</span><br><span class="line">yum_repository: name=local description=local baseurl=file:///mnt enabled=1 gpgcheck=0 file=dgf</span><br><span class="line">- name ：&quot;挂载镜像&quot;</span><br><span class="line">mount: src=/dev/cdrom path=/mnt state=mounted</span><br><span class="line">name：&quot;安装web服务&quot;</span><br><span class="line">yum: name=httpd state=installed</span><br></pre></td></tr></table></figure>
+
+<p>也可以在tasks中定义要执行该任务的用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tasks:</span><br><span class="line">  -name: 运行 df -h</span><br><span class="line">  remote_user: 用户</span><br><span class="line">  shell: name=df -h</span><br></pre></td></tr></table></figure>
+
+<p>还可以使用sudo授权用户执行该任务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tasks:</span><br><span class="line">  - name: 运行 df -h</span><br><span class="line">  sudo_user: 用户</span><br><span class="line">  sudo: ves</span><br><span class="line">  shell: name=df -h</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="template-引用变量"><a href="#template-引用变量" class="headerlink" title="template 引用变量"></a>template 引用变量</h5><p>首先获取10.211的http配置文件，然后改名修改配置文件，将监听端口修改为 http_port变量即可调用变量</p>
+<p>例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">- hosts: 192.168.100.211</span><br><span class="line">remote_user: root</span><br><span class="line">vars:</span><br><span class="line">http_port: 8080</span><br><span class="line">tasks:</span><br><span class="line">- name ：&quot;拷贝httpd配置文件&quot;</span><br><span class="line">template:</span><br><span class="line">sre=httpd.conf.j2 dest=/etc/httpd/conf/httpd.conf</span><br><span class="line">- name ：&quot; 重启web服务&quot;</span><br><span class="line">systemd: name=httpd state=restarted</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="Play-book-的运行方式"><a href="#Play-book-的运行方式" class="headerlink" title="Play-book 的运行方式"></a>Play-book 的运行方式</h5><p>​     通过ansible-playbook命令运行</p>
+<p>​            格式： ansible-playbook 文件    选项</p>
+<p>​    常用选项：</p>
+<p>​            –C     用作测试，不真正执行操作,流程是</p>
+<p>​           –list-hosts  列出运行任务的主机</p>
+<p>​          –list-tags     列出playbook文件中定义所有的tags</p>
+<p>​            –list_tasks     列出playbook文件中定义的所有任务集</p>
+<p>​            –limit   主机列表，只针对主机列表中某个主机或者某个组执行</p>
+<p>​             -f       指定并发数，默认为5个</p>
+<p>​             -t          指定tags运行，运行某一个或多个tags</p>
+<p>​             -v      显示过程    -vv  -vvv 更详细</p>
+<p><strong>Play-book 中变量的使用</strong></p>
+<p>tail -10 &#x2F;etc&#x2F;ansible&#x2F;hosts</p>
+<p>环境说明：配置两个组，一个testA 和一个testB组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[testA]</span><br><span class="line">192.168.100.208</span><br><span class="line">[testB]</span><br><span class="line">192.168.100.209</span><br><span class="line">[test:children]     包含testA 和testB</span><br><span class="line">testA testr</span><br></pre></td></tr></table></figure>
+
+<p>命令行指定变量</p>
+<p>ansible-playbook -e “pkg-httpd“ 1111. yml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">- hosts: all remote_user: root</span><br><span class="line">tasks:</span><br><span class="line">- name: install pkg yum: name=&#123;&#123; pkg &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="Handlers动作-与-Notify-触发"><a href="#Handlers动作-与-Notify-触发" class="headerlink" title="Handlers动作 与 Notify 触发"></a>Handlers动作 与 Notify 触发</h2><hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">- hosts: 192.168.100.210</span><br><span class="line">remote_user: root</span><br><span class="line">vars:</span><br><span class="line">http_port: 8080</span><br><span class="line">tasks:</span><br><span class="line">- name: &quot;拷贝httpd配置文件&quot;</span><br><span class="line">template: sre=httpd.conf.j2 dest=/etc/httpd/conf/httpd.conf</span><br><span class="line">notify: </span><br><span class="line">    - restart httpd</span><br><span class="line">-name：&quot;启动web服务&quot;</span><br><span class="line">systemd: name=httpd state=started</span><br><span class="line">handlers:</span><br><span class="line">   - name: restart httpd </span><br><span class="line">   system: name=httpad state=restarted</span><br></pre></td></tr></table></figure>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/ansible" style="color: #ffa2c4">
+                ansible
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/ansible角色/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/07/11/ansible模块/">
+        <h2>
+            Ansible模块
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <h5 id="ansible模块"><a href="#ansible模块" class="headerlink" title="ansible模块"></a>ansible模块</h5><p>Ansible-doc -l | wc -l 统计有多少个模块</p>
+<p>Ansible-doc -s command 可以查看模块的使用方法</p>
+<hr>
+<p><strong>常用模块</strong></p>
+<p>command模块</p>
+<p>ansible 默认的模块执行命令时，shell中的 &lt; &gt; | , ; &amp; $ 等不能在command模块中使用，如果需要使用则需要用shell模块</p>
+<p>查看目录文件:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -a &#x27;ls 目录&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>查看目录路径:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -a &#x27;chdir=/路径 pwd&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>判断目录是否存在，如果存在则不执行后面的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -a &#x27;creates=/目录 ls&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>判断目录是否存在，如果存在则执行后面的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -a &#x27;removes=/目录 ls&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>shell模块</p>
+<p>专门用来执行shell命令的模块和command模块一样，参数基本差不多</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m shell -a &#x27;touch /root/123.txt &amp;&amp; ls /root&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Script 模块</p>
+<p>用在被管理机器上执行shell脚本的模块，脚本无需在被管理机器上面存在</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m script -a &#x27;脚本&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>原理: 运行命令时，将脚步远程发到对应的服务器上执行完后删除</p>
+<p>发送到 &#x2F;root&#x2F;.ansible&#x2F;tmp</p>
+<p>file 模块</p>
+<p>用于对文件的创建 删除 修改 权限控制</p>
+<p>删除文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m file -a &#x27;name=文件名 state=absent&#x27;</span><br><span class="line">adsent删除</span><br></pre></td></tr></table></figure>
+
+<p>创建文件:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m file -a &#x27;name=文件 state=touch mode=611&#x27;</span><br><span class="line">touch创建        mode给予权限   owner 属组   group 属主</span><br></pre></td></tr></table></figure>
+
+<p>创建目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m file -a &#x27;name=目录 state=directory&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>软连接把源文件删除后，目标文件不能使用，软连接使用的inode号和源文件是不一样的，软连接即可以连接目录又可以链接文件</p>
+<p> 硬连接相反,只能链接文件</p>
+<p>创建软连接:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 </span><br></pre></td></tr></table></figure>
+
+
+
+<p>copy模块</p>
+<p>管理端复制文件到远程主机，可以设置权限，属组，属主等</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m copy -a &#x27;src=文件 dest=/root mode=777 owner=用户 group=用户&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>如果复制文件时，怕替换原文件游泳信息，则可以加入</p>
+<p>backup&#x3D;yes</p>
+<p>直接将内容写到目标文件如果管理机没用要发送的源文件则可以:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m copy -a &#x27;content=&quot;内容\n&quot; dest=/root/内容.txt&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>fetch模块</p>
+<p>将目标文件拉取到管理机</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m fetch -a &#x27;src=目标文件 dest=本地目录&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>user模块</p>
+<p>创建用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m user -a &#x27;name=名字 uid=uid号 group=root password=123.com shell=/sbin/nologin home=/opt/名字&#x27;</span><br><span class="line"></span><br><span class="line">shell 指定用户是否可以shell登陆</span><br><span class="line">home 指定用户家目录</span><br></pre></td></tr></table></figure>
+
+<p>删除用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m user -a &#x27;name=名字 state=absent&#x27;</span><br><span class="line">可以删除用户，但不能删除家目录</span><br><span class="line"></span><br><span class="line">ansible 组 -m user -a &#x27;name=名字 state=absent remove=yes&#x27;</span><br><span class="line">可以删除用户和家目录</span><br></pre></td></tr></table></figure>
+
+
+
+<p> group 模块</p>
+<p>创建组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m group -a &#x27;name=名字&#x27;</span><br><span class="line">ansible 组 -m group -a &#x27;name=名字 state=present&#x27;</span><br><span class="line">present创建</span><br></pre></td></tr></table></figure>
+
+<p> 删除组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m group -a &#x27;name=名字 state=absent&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p> yum_repository模块</p>
+<p>用来编写yum仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum_repository -a &#x27;name=local description=&quot;local&quot; baseurl=file:///mnt enabled=1 gpgcheck=no file=dgf&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>mount模块</p>
+<p>挂载模块</p>
+<p>添加开机自动挂在文件:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansibe 组 -m mount -a &#x27;src=/dev/chrom path=/mnt fstype=iso9660 state=present&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>挂载:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansibe 组 -m mount -a &#x27;src=/dev/chrom path=/mnt fstype=iso9660 state=mounted&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>yum 模块</p>
+<p>安装一些软件，依赖</p>
+<p>列出已安装的软件包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum -a &#x27;list=installed&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>列出可更新的软件包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum -a &#x27;list=updatates&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>列出所有的yum仓库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum -a &#x27;list=repos&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>安装软件包:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum -a &#x27;name=软件 state=installed&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>卸载软件包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum -a &#x27;name=软件 state=removed&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>Service模块</p>
+<p>启动服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m service -a &#x27;name=服务 state=started enable=yes&#x27;</span><br><span class="line">enable=yes 是否开机自启</span><br></pre></td></tr></table></figure>
+
+<p>重启服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m service -a &#x27;name=服务 state=restarted enable=yes&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>停止服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m service -a &#x27;name=服务 state=stoped enable=yes&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>重载服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m service -a &#x27;name=服务 state=reloaded enable=yes&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>pip模块</p>
+<p>用来给python装模块</p>
+<p>如果有python代码需要在管理机远行，则需要安装pip</p>
+<p>cron模块</p>
+<p>计划任务模块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m cron -a &#x27;name=&quot;这是一个测试的计划任务“ minute=*     hour=* day=* month=* weekday=* job=&#x27;/bin/bash /root/test.sh&#x27;</span><br><span class="line">minute=* hour=* day=* month=* weekday=* 分时日月周</span><br></pre></td></tr></table></figure>
+
+<p>删除计划任务：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m cron -a &#x27;name=名字 state=absent&#x27;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>系统信息相关的模块</p>
+<p>Setup 模块</p>
+<p>首先</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible -s setup </span><br><span class="line">查看使用方法，复制需要查看的信息</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 地址 -m setup -a &#x27;filter=粘贴内容&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ansible_all_ipv4_addresses 所有的 ipv4 地址</span><br><span class="line">ansible_all_ipv6_addresses 所有的 ipr6 地址</span><br><span class="line">ansible architecture 系统的架构</span><br><span class="line">ansible_date_time 系统时间</span><br><span class="line">ansible default ipv4 系统的默认 ipv4 地址</span><br><span class="line">ansible distribution 系统名称</span><br><span class="line">ansible_ distribution_ file_variety 系统的家族</span><br><span class="line">ansible_ distribution_ ma jor_version 系统的版本</span><br><span class="line">ansible_domain 系统所在的域</span><br><span class="line">ansible_fqdn 系统的主机名</span><br><span class="line">ansible hostname 系统的主机名，简写</span><br><span class="line">ansible_os_family 系统的家族</span><br><span class="line">ansible processor cores epu 的核数</span><br><span class="line">ansible processor count cpu 的颗数</span><br><span class="line">ansible processor vcpus epu 的个数</span><br></pre></td></tr></table></figure>
+
+
+
+<p>find模块</p>
+<p>查找文件</p>
+<p>找出opt目录下30天前的文件，找到后删除</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">find /opt/ -mtime +30 -type f -exec rm -rf &#123;&#125; \;</span><br><span class="line">-mtime +30 30天前</span><br><span class="line">-type f 类型 文件</span><br><span class="line">-exec rm -rf 删除前面找到的内容</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /opt/ -mtime +30 | xargs rm -rf </span><br></pre></td></tr></table></figure>
+
+<p>查找目录下包含abc的文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -rl | &quot;abc&quot; /目录</span><br></pre></td></tr></table></figure>
+
+<p>查找opt目录下内容包含abc的文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m find -a &#x27;paths=/opt contains=&quot;.*abc.*&quot;&#x27;</span><br><span class="line">查找的只是opt目录没用查找子目录</span><br><span class="line">ansible 组 -m find -a &#x27;paths=/opt contains=&quot;.*abc.*&quot; recurse=yes&#x27; 递归查找，可以查找子目录</span><br></pre></td></tr></table></figure>
+
+<p>查找opt目录.sh结尾,包括查找隐藏文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m find -a &#x27;paths=/opt patterns=&quot;*.sh&quot;hidden=yes file_type=any&#x27;</span><br><span class="line">hidden 包括查找隐藏文件</span><br><span class="line">file_type=any 包括所有文件类型，包括软连接</span><br></pre></td></tr></table></figure>
+
+<p> 查找opt目录下，文件小于2G的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m find -a &#x27;paths=/opt size=-2G recurse=yes&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<p> replace 模块</p>
+<p>​    替换模块</p>
+<p>把opt里text文件的大写ABC替换成小写abc</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m replace -a &#x27;path=/opt/test regexp=&quot;ABC&quot; replace=abc&#x27;</span><br><span class="line"></span><br><span class="line">ansible 组 -m replace -a &#x27;path=/opt/test regexp=&quot;ABC&quot; replace=abc backup=yes&#x27;     backup=yes 备份</span><br></pre></td></tr></table></figure>
+
+
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/ansible" style="color: #ff7d73">
+                ansible
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/07/11/ansible模块/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+             
+<div class="page-current">
+    <div class="prev">
+        
+    </div>
+    <div class="page-index">
+        
+        <span class="current">
+            1
+        </span>
+        
+        <span>
+            <a href="/page/2/">
+                <span class="page-num">
+                    2
+                </span>
+            </a>
+            
+            
+        </span>
+        
+    </div>
+    <div class="next">
+        
+        <a href="/page/2/ ">
+            <span class="page-num">
+                <svg class="fa-icon"><use xlink:href="#caret-right-solid"></use></svg>
+            </span>
+        </a>
+        
+    </div>
+</div>
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <div id="card-div">
+    <div class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src=" " alt="avatar">
+        </div>
+        <div class="name">
+            Eva
+        </div>
+        <div class="descriptions">
+            
+            <div class="description">
+                Description...
+            </div>
+            
+        </div>
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/1935157709">
+                    <i class="fa-brands fa-github fa-fw"></i>
+                </a>
+            </span>
+            
+        </div>
+        <div class="friend-links">
+            
+        </div>
+    </div>
+</div>
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 欢迎浏览
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Eva
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>

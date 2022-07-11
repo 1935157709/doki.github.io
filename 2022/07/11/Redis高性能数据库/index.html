@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Redis高性能数据库 | 欢迎浏览</title>
+        <meta name="author" content="Eva">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">欢迎浏览</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;欢迎浏览</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>Redis高性能数据库 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Redis" style="color: #00bcd4">
+                    Redis
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <p><strong>Redis 高性能数据库</strong></p>
+<p>在公司中经常用redis来做数据库缓存</p>
+<p>redis会把数据存到内存里</p>
+<hr>
+<p>常见的缓存数据库有：</p>
+<p>redis    </p>
+<p>memcache</p>
+<p>相同点：都是缓存数据库，都是以key-vlaue 的形式存储</p>
+<p>不同点：redis支持的数据持久化存在内存中的数据不会随着系统时间或服务器的重启而丢失，redis支持的数据类型相对较多</p>
+<p>memcache不支持数据持久化</p>
+<hr>
+<p>redis优点</p>
+<p>性能极高 redis支持超过100K+每秒的读写频率</p>
+<p>原子性 redis所有操作都是原子性，既所有操作要么成功要么失败不执行</p>
+<p>redis运行在内存中但是可以持久化到硬盘</p>
+<p>redis更像一个加强版memcache</p>
+<p>memcache 适合多读少写，大数据量的情况</p>
+<p>redis 适合用于对读写效率要求都很高，数据处理业务复杂和安全性要求较高的系统</p>
+<hr>
+<p>redis数据回收策略</p>
+<p>redis的回收策略用的LRU算法</p>
+<p>可以设置数据过期时间</p>
+<p>volatile-lru 挑选已经设置过期的数据，挑选最近最少使用的数据淘汰</p>
+<p>balatile-ttl 从已设置过期的数据里，挑选将要过期的数据</p>
+<p>allkeys-lru 从数据中挑选最近使用最少的数据淘汰</p>
+<p>allkeys-random 从数据中挑选任意数据淘汰</p>
+<p>no-enviction 禁止驱逐数据，不淘汰数据</p>
+<hr>
+<p>redis主从复制</p>
+<p>主从复制分为全量同步和增量同步</p>
+<p>全量同步：redis全量复制一般发生在从初始化阶段，这时从需要将主上的所有数据都复制一份</p>
+<p>1.从服务器连接主服务器，发送sync命令</p>
+<p>2.主服务器接受道sync命名后，开始执行BGSAVE 命令生成RDB文件并使用缓冲区记录后执行的所有写命令</p>
+<p>3.主服务器BGSAVE执行完后，向所有从服务器发送快照文件，并在发送期间继续记录被执行的命令</p>
+<p>4.从服务器收到	快照文件后丢弃所有旧数据，载入收到的快照</p>
+<p>5.主服务器快照发送完毕后开始向从服务器发送缓冲区的写命令</p>
+<p>6.从服务器完成对快照的载入，开始接受命令请求，并执行来自主服务器缓冲区的写命令</p>
+<hr>
+<p>redis哨兵集群</p>
+<p>redis哨兵和主从的区别</p>
+<p>主从：主挂了不可以替代主</p>
+<p>哨兵：主挂了从可以替代主</p>
+<p>工作进程</p>
+<p>监控：哨兵通过流言协议会不断的检查你的master和slave是否运作正常</p>
+<p>提醒：当被监控的某个redis节点出现问题时，哨兵可以通过api向管理员或者其他应用程序发送通知</p>
+<p>自动故障转移：当一个master不能正常工作时，哨兵通过投票协议会开始一次自动故障迁移操作，他会将其他一个slave升级为新的master 当客户端试图连接失效的master时，集群也会像客户端返回新的master的地址，使得集群可以使用现在的master替换失效的master</p>
+<hr>
+<p>redis数据持久化</p>
+<p>redis有两种数据持久化方式，默认是RDB持久化比AOF恢复速度快</p>
+<p>RDB劣势：RDB快照是一次全量备份，存储的是内存数据的二进制序列化形式，存储上非常紧凑，当进行快照持久化时。会开启一个子进程专门负责快照持久化，子进程会拥有父进程的内存数据，父进程修改内存子进程不会反应过来，所以在快照持久化期间修改的数据不会保存，可能丢失数据</p>
+<p>RDB 已快照的形式持久化文件</p>
+<p>三种持久化机制 sava bgsave 自动同步</p>
+<p>AOF 以文件的形式持久化，将每一条增删改操作写入文件当中</p>
+<p>每修改同步always</p>
+<p>每秒同步everysec</p>
+<p>no 随着操作系统的同步而同步</p>
+<p>优点，对比RDB，能够保证数据的安全</p>
+<p>AOF日志文件即使过大的时候，出现后台重写操作，也不会影响客户端的读写</p>
+<p>AOF日志通过可读的方式进行记录</p>
+<p>缺点：</p>
+<p>对于同一份数据来说，AOF日志文件通常比RDB数据快照文件更大</p>
+<p>redis默认的持久化方式时RDB，当两种持久化同时开启，AOF生效</p>
+<hr>
+<p>redis-cluster集群</p>
+<p>一般使用redis-cli 5.0以后的版本</p>
+
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 欢迎浏览
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Eva
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>

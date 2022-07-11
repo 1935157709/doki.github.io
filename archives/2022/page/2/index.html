@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Archives | 欢迎浏览</title>
+        <meta name="author" content="Eva">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">欢迎浏览</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;欢迎浏览</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div id="archives">
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/Redis高性能数据库/">
+                <h3>Redis高性能数据库</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/Redis" style="color: #00a596">
+                            Redis
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/Raid入门/">
+                <h3>Raid入门</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/Raid" style="color: #03a9f4">
+                            Raid
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/prometheus监控/">
+                <h3>Prometheus监控</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/Prometheus" style="color: #ff7d73">
+                            Prometheus
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/awk入门/">
+                <h3>awk入门</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/awk" style="color: #ffa2c4">
+                            awk
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/nginx服务/">
+                <h3>nginx服务</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/nginx" style="color: #03a9f4">
+                            nginx
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/tomcat服务/">
+                <h3>Tomcat服务</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/Tomcat" style="color: #ff7d73">
+                            Tomcat
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/ansible自动化运维/">
+                <h3>ansible自动化运维</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/ansible" style="color: #ff7d73">
+                            ansible
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/zabbix状态监控/">
+                <h3>zabbix状态监控</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/zabbix" style="color: #ff7d73">
+                            zabbix
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/ansible角色/">
+                <h3>ansible角色</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/ansible" style="color: #ffa2c4">
+                            ansible
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/ansible模块/">
+                <h3>ansible模块</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/ansible" style="color: #ff7d73">
+                            ansible
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/MacM1安装win11/">
+                <h3>MacM1安装win11</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/安装win11" style="color: #03a9f4">
+                            安装win11
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/elk日志分析/">
+                <h3>elk日志分析</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/elk" style="color: #00a596">
+                            elk
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/Linux常用命令/">
+                <h3>Linux常用命令</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/Linux" style="color: #00a596">
+                            Linux
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/SQL语句/">
+                <h3>SQL语句</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/Mysql" style="color: #03a9f4">
+                            Mysql
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/Mysql数据库/">
+                <h3>Mysql数据库</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/Mysql" style="color: #00a596">
+                            Mysql
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/DNS解析过程/">
+                <h3>DNS解析过程</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/DNS" style="color: #00bcd4">
+                            DNS
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/正则表达式/">
+                <h3>正则表达式</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/正则" style="color: #00bcd4">
+                            正则
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/Gitlab与jenkins构建持续集成（CI）环境/">
+                <h3>Gitlab与jenkins构建持续集成（CI）环境</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/Git" style="color: #ffa2c4">
+                            Git
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/7/11</div>
+            <a href="/2022/07/11/hello-world/">
+                <h3>Hello World</h3>
+            </a>
+            <div class="info">
+                
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 欢迎浏览
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Eva
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>

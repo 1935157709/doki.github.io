@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Ansible模块 | 欢迎浏览</title>
+        <meta name="author" content="Eva">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">欢迎浏览</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;欢迎浏览</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>Ansible模块 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/11
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ansible" style="color: #00a596">
+                    ansible
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <h5 id="ansible模块"><a href="#ansible模块" class="headerlink" title="ansible模块"></a>ansible模块</h5><p>Ansible-doc -l | wc -l 统计有多少个模块</p>
+<p>Ansible-doc -s command 可以查看模块的使用方法</p>
+<hr>
+<p><strong>常用模块</strong></p>
+<p>command模块</p>
+<p>ansible 默认的模块执行命令时，shell中的 &lt; &gt; | , ; &amp; $ 等不能在command模块中使用，如果需要使用则需要用shell模块</p>
+<p>查看目录文件:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -a &#x27;ls 目录&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>查看目录路径:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -a &#x27;chdir=/路径 pwd&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>判断目录是否存在，如果存在则不执行后面的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -a &#x27;creates=/目录 ls&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>判断目录是否存在，如果存在则执行后面的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -a &#x27;removes=/目录 ls&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>shell模块</p>
+<p>专门用来执行shell命令的模块和command模块一样，参数基本差不多</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m shell -a &#x27;touch /root/123.txt &amp;&amp; ls /root&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Script 模块</p>
+<p>用在被管理机器上执行shell脚本的模块，脚本无需在被管理机器上面存在</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m script -a &#x27;脚本&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>原理: 运行命令时，将脚步远程发到对应的服务器上执行完后删除</p>
+<p>发送到 &#x2F;root&#x2F;.ansible&#x2F;tmp</p>
+<p>file 模块</p>
+<p>用于对文件的创建 删除 修改 权限控制</p>
+<p>删除文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m file -a &#x27;name=文件名 state=absent&#x27;</span><br><span class="line">adsent删除</span><br></pre></td></tr></table></figure>
+
+<p>创建文件:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m file -a &#x27;name=文件 state=touch mode=611&#x27;</span><br><span class="line">touch创建        mode给予权限   owner 属组   group 属主</span><br></pre></td></tr></table></figure>
+
+<p>创建目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m file -a &#x27;name=目录 state=directory&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>软连接把源文件删除后，目标文件不能使用，软连接使用的inode号和源文件是不一样的，软连接即可以连接目录又可以链接文件</p>
+<p> 硬连接相反,只能链接文件</p>
+<p>创建软连接:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 </span><br></pre></td></tr></table></figure>
+
+
+
+<p>copy模块</p>
+<p>管理端复制文件到远程主机，可以设置权限，属组，属主等</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m copy -a &#x27;src=文件 dest=/root mode=777 owner=用户 group=用户&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>如果复制文件时，怕替换原文件游泳信息，则可以加入</p>
+<p>backup&#x3D;yes</p>
+<p>直接将内容写到目标文件如果管理机没用要发送的源文件则可以:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m copy -a &#x27;content=&quot;内容\n&quot; dest=/root/内容.txt&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>fetch模块</p>
+<p>将目标文件拉取到管理机</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m fetch -a &#x27;src=目标文件 dest=本地目录&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>user模块</p>
+<p>创建用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m user -a &#x27;name=名字 uid=uid号 group=root password=123.com shell=/sbin/nologin home=/opt/名字&#x27;</span><br><span class="line"></span><br><span class="line">shell 指定用户是否可以shell登陆</span><br><span class="line">home 指定用户家目录</span><br></pre></td></tr></table></figure>
+
+<p>删除用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m user -a &#x27;name=名字 state=absent&#x27;</span><br><span class="line">可以删除用户，但不能删除家目录</span><br><span class="line"></span><br><span class="line">ansible 组 -m user -a &#x27;name=名字 state=absent remove=yes&#x27;</span><br><span class="line">可以删除用户和家目录</span><br></pre></td></tr></table></figure>
+
+
+
+<p> group 模块</p>
+<p>创建组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m group -a &#x27;name=名字&#x27;</span><br><span class="line">ansible 组 -m group -a &#x27;name=名字 state=present&#x27;</span><br><span class="line">present创建</span><br></pre></td></tr></table></figure>
+
+<p> 删除组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m group -a &#x27;name=名字 state=absent&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p> yum_repository模块</p>
+<p>用来编写yum仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum_repository -a &#x27;name=local description=&quot;local&quot; baseurl=file:///mnt enabled=1 gpgcheck=no file=dgf&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>mount模块</p>
+<p>挂载模块</p>
+<p>添加开机自动挂在文件:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansibe 组 -m mount -a &#x27;src=/dev/chrom path=/mnt fstype=iso9660 state=present&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>挂载:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansibe 组 -m mount -a &#x27;src=/dev/chrom path=/mnt fstype=iso9660 state=mounted&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>yum 模块</p>
+<p>安装一些软件，依赖</p>
+<p>列出已安装的软件包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum -a &#x27;list=installed&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>列出可更新的软件包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum -a &#x27;list=updatates&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>列出所有的yum仓库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum -a &#x27;list=repos&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>安装软件包:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum -a &#x27;name=软件 state=installed&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>卸载软件包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m yum -a &#x27;name=软件 state=removed&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>Service模块</p>
+<p>启动服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m service -a &#x27;name=服务 state=started enable=yes&#x27;</span><br><span class="line">enable=yes 是否开机自启</span><br></pre></td></tr></table></figure>
+
+<p>重启服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m service -a &#x27;name=服务 state=restarted enable=yes&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>停止服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m service -a &#x27;name=服务 state=stoped enable=yes&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>重载服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m service -a &#x27;name=服务 state=reloaded enable=yes&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>pip模块</p>
+<p>用来给python装模块</p>
+<p>如果有python代码需要在管理机远行，则需要安装pip</p>
+<p>cron模块</p>
+<p>计划任务模块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m cron -a &#x27;name=&quot;这是一个测试的计划任务“ minute=*     hour=* day=* month=* weekday=* job=&#x27;/bin/bash /root/test.sh&#x27;</span><br><span class="line">minute=* hour=* day=* month=* weekday=* 分时日月周</span><br></pre></td></tr></table></figure>
+
+<p>删除计划任务：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m cron -a &#x27;name=名字 state=absent&#x27;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>系统信息相关的模块</p>
+<p>Setup 模块</p>
+<p>首先</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible -s setup </span><br><span class="line">查看使用方法，复制需要查看的信息</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 地址 -m setup -a &#x27;filter=粘贴内容&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ansible_all_ipv4_addresses 所有的 ipv4 地址</span><br><span class="line">ansible_all_ipv6_addresses 所有的 ipr6 地址</span><br><span class="line">ansible architecture 系统的架构</span><br><span class="line">ansible_date_time 系统时间</span><br><span class="line">ansible default ipv4 系统的默认 ipv4 地址</span><br><span class="line">ansible distribution 系统名称</span><br><span class="line">ansible_ distribution_ file_variety 系统的家族</span><br><span class="line">ansible_ distribution_ ma jor_version 系统的版本</span><br><span class="line">ansible_domain 系统所在的域</span><br><span class="line">ansible_fqdn 系统的主机名</span><br><span class="line">ansible hostname 系统的主机名，简写</span><br><span class="line">ansible_os_family 系统的家族</span><br><span class="line">ansible processor cores epu 的核数</span><br><span class="line">ansible processor count cpu 的颗数</span><br><span class="line">ansible processor vcpus epu 的个数</span><br></pre></td></tr></table></figure>
+
+
+
+<p>find模块</p>
+<p>查找文件</p>
+<p>找出opt目录下30天前的文件，找到后删除</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">find /opt/ -mtime +30 -type f -exec rm -rf &#123;&#125; \;</span><br><span class="line">-mtime +30 30天前</span><br><span class="line">-type f 类型 文件</span><br><span class="line">-exec rm -rf 删除前面找到的内容</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /opt/ -mtime +30 | xargs rm -rf </span><br></pre></td></tr></table></figure>
+
+<p>查找目录下包含abc的文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -rl | &quot;abc&quot; /目录</span><br></pre></td></tr></table></figure>
+
+<p>查找opt目录下内容包含abc的文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m find -a &#x27;paths=/opt contains=&quot;.*abc.*&quot;&#x27;</span><br><span class="line">查找的只是opt目录没用查找子目录</span><br><span class="line">ansible 组 -m find -a &#x27;paths=/opt contains=&quot;.*abc.*&quot; recurse=yes&#x27; 递归查找，可以查找子目录</span><br></pre></td></tr></table></figure>
+
+<p>查找opt目录.sh结尾,包括查找隐藏文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m find -a &#x27;paths=/opt patterns=&quot;*.sh&quot;hidden=yes file_type=any&#x27;</span><br><span class="line">hidden 包括查找隐藏文件</span><br><span class="line">file_type=any 包括所有文件类型，包括软连接</span><br></pre></td></tr></table></figure>
+
+<p> 查找opt目录下，文件小于2G的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m find -a &#x27;paths=/opt size=-2G recurse=yes&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<p> replace 模块</p>
+<p>​    替换模块</p>
+<p>把opt里text文件的大写ABC替换成小写abc</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ansible 组 -m replace -a &#x27;path=/opt/test regexp=&quot;ABC&quot; replace=abc&#x27;</span><br><span class="line"></span><br><span class="line">ansible 组 -m replace -a &#x27;path=/opt/test regexp=&quot;ABC&quot; replace=abc backup=yes&#x27;     backup=yes 备份</span><br></pre></td></tr></table></figure>
+
+
+
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 欢迎浏览
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Eva
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>
